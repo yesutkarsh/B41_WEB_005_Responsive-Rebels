@@ -132,3 +132,14 @@ nav{
     font-size: 25px;
     color: rgba(255, 255, 255, 0.659);
 }
+.hero{
+    color: white;
+}
+.aiEditor{
+    color: gray;
+    font-family: "Roboto", serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
