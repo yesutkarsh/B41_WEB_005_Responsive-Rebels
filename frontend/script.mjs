@@ -37,6 +37,6 @@ closeSidePanel.addEventListener("click", () => {
 });
 
 // Redirecting function on clicking On algo buttns
-function changeDis(value){
-     window.location.href =  `../Algorithms/${value}/main.html`
-}
+// function changeDis(value){
+//      window.location.href =  `../Algorithms/${value}/main.html`
+// }
