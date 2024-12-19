@@ -1,11 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>algovision</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+   <!-- Google Font  -->
+
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <!-- Navagation Bar -->
+    <nav>
+      <div class="hamBurger" id="hamBurger">
+        <i class="ri-collage-fill"></i>
+      </div>
+   
+      <div class="profile" id="profile">
+        <i class="ri-user-smile-fill"></i>
+      </div>
+    </nav>
+
+
+<!-- Side Panel -->
+    <div class="sidePanel" id="SidePanel">
+        <nav>
+            <img src="./assets/smallLogo.png" alt="">
+            <i class="ri-arrow-go-back-line" id="closeSidePanel"></i>
+        </nav>
+        <div class="line"></div>
+
+        <!-- List Of Algorithms -->
+        <div class="menu-items" id="menu-items">
+            <li class="menu-items-active">Explore</li>
+            <li>Bubble Sort</li>
+        </div>
+    </div>
+
+
+
+    <!-- Hero Section -->
+    <div class="hero" id="hero">
+        <div class="logo" id="logo">
+            <img src="./assets/logo.png" alt="">
+        </div>
+
+        <div class="searchBar" id="searchBar">
+            <i class="ri-search-line"></i>
+            <input type="text" placeholder="Search for Algorithm or ctrk+k"/>
+          </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/motion@11.11.13/dist/motion.js"></script>
+ <script type="module" src="script.mjs"></script>
+
+  </body>
 </html>
