@@ -5,22 +5,6 @@ let hamburger = document.getElementById("hamBurger");
 let sidePanel = document.getElementById("SidePanel");
 let closeSidePanel = document.getElementById("closeSidePanel");
 
-// buttons for Algorithms
-let bubble = document.getElementById("bubble")
-let selection = document.getElementById("selection")
-let linked = document.getElementById("linked")
-
-
-bubble.addEventListener("click",()=>{
-    changeDis("Bubble Sort")
-})
-selection.addEventListener("click",()=>{
-    changeDis("Selection Sort")
-})
-linked.addEventListener("click",()=>{
-    changeDis("Linked List")
-})
-
 // Opening Side Panel
 hamburger.addEventListener("click", () => {
     sidePanel.style.transform = "translateX(-100%)";
@@ -36,7 +20,3 @@ closeSidePanel.addEventListener("click", () => {
         });
 });
 
-// Redirecting function on clicking On algo buttns
-// function changeDis(value){
-//      window.location.href =  `../Algorithms/${value}/main.html`
-// }
