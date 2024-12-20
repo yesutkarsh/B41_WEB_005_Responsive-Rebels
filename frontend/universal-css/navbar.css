@@ -3,10 +3,13 @@ nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 20px;
     font-size: 30px;
     gap: 20px;
     color: white;
+    background-color: #000000;
+    height: 70px;
+    padding: 20px;
+
 }
 a{
     color: white;

@@ -1,243 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Linked List Visualizer</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            padding: 20px;
-        }
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../../universal-css/navbar.css" />
 
-        h1 {
-            margin-bottom: 20px;
-        }
+    <!-- Google Font -->
 
-        .node, .null {
-            display: inline-block;
-            padding: 10px;
-            margin: 5px;
-            border-radius: 5px;
-            color: white;
-            font-weight: bold;
-        }
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../universal-css/animationVisualize.css" />
 
-        .node {
-            background-color: #3498db;
-        }
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Google Font  -->
 
-        .null {
-            background-color: #e74c3c;
-        }
+    <link rel="stylesheet" href="../../universal-css/slider.css" />
+  </head>
+  <body>
+    <!-- Navagation Bar -->
+    <nav>
+      <div class="hamBurger" id="hamBurger">
+        <i class="ri-collage-fill"></i>
+      </div>
 
-        .arrow {
-            display: inline-block;
-            margin: 5px;
-            color: black;
-            font-size: 20px;
-        }
+      <div class="logo" id="logo">
+        <a href="/">
+          <img src="../../assets/fullBlack.png" alt="" />
+        </a>
+      </div>
 
-        button {
-            margin: 5px;
-            padding: 10px;
-            border: none;
-            color: white;
-            background-color: #3498db;
-            border-radius: 5px;
-            cursor: pointer;
-        }
+      <div class="profile" id="profile">
+        <i class="ri-user-smile-fill"></i>
+      </div>
+    </nav>
 
-        button:hover {
-            background-color: #2980b9;
-        }
+    <!-- Side Panel -->
+    <div class="sidePanel" id="SidePanel">
+      <nav>
+        <img src="../../assets/smallLogo.png" alt="" />
+        <i class="ri-arrow-go-back-line" id="closeSidePanel"></i>
+      </nav>
+      <div class="line"></div>
 
-        #container {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
+      <!-- List Of Algorithms -->
+      <div class="menu-items" id="menu-items">
+        <li>Explore</li>
+        <a href="./Algorithms/Bubble Sort/main.html">
+          <li id="bubble">Bubble Sort</li>
+        </a>
+        <a href="./Algorithms/Merge Sort/main.html">
+          <li class="menu-items-active">Merge Sort</li>
+        </a>
+        <li>Linked List</li>
+      </div>
+    </div>
 
-        #speedControl {
-            margin: 10px;
-        }
-    </style>
-</head>
-<body>
-    <h1>Linked List Visualizer</h1>
-    <button id="generate">Generate Random Array</button>
-    <input type="text" id="userInput" placeholder="Enter value" required>
-    <button id="insert">Insert</button>
-    <button id="delete">Delete</button>
-    <button id="stop">Reset Visualizer</button>
-    <br><br>
-    <label for="speedControl">Speed:</label>
-    <input type="range" id="speedControl" min="1" max="3" value="2">
-    <div id="container"></div>
+    <h1>Linked List</h1>
+    <div class="linkedList">
+      <div class="about" id="about">
+        <p>
+          In computer science, a linked list is a linear collection of data
+          elements whose order is not given by their physical placement in
+          memory. Instead, each element points to the next. It is a data
+          structure consisting of a collection of nodes which together represent
+          a sequence. In its most basic form, each node contains data, and a
+          reference (in other words, a link) to the next node in the sequence.
+        </p>
 
-    <script>
-        // HTML Elements
-        const container = document.getElementById("container");
-        const generateBtn = document.getElementById("generate");
-        const insertBtn = document.getElementById("insert");
-        const deleteBtn = document.getElementById("delete");
-        const userInput = document.getElementById("userInput");
-        const speedControl = document.getElementById("speedControl");
-        const resetBtn = document.getElementById("stop");
+        <p>
+          This structure allows for efficient insertion or removal of elements
+          from any position in the sequence during iteration. More complex
+          variants add additional links, allowing more efficient insertion or
+          removal of nodes at arbitrary positions. A drawback of linked lists is
+          that data access time is linear in respect to the number of nodes in
+          the list. Because nodes are serially linked, accessing any node
+          requires that the prior node be accessed beforehand (which introduces
+          difficulties in pipelining). Faster access, such as random access, is
+          not feasible. Arrays have better cache locality compared to linked
+          lists.
+        </p>
+      </div>
 
-        // Linked List Node
-        class Node {
-            constructor(value) {
-                this.value = value;
-                this.next = null;
-            }
-        }
 
-        // Linked List Class
-        class LinkedList {
-            constructor() {
-                this.head = null;
-            }
+      <div class="algorithm" id="algorithm">
+      <!-- Visualize animation -->
+        <span class="visualize">
+          <div id="triangle">
+            <svg
+              id="Layer_1"
+              data-name="Layer 1"
+              version="1.1"
+              viewBox="0 0 2000 2000"
+            >
+              <polygon
+                class="cls-1"
+                points="928 781 1021 951 784.5 1371.97 1618 1371.97 1530.32 1544 509 1539 928 781"
+              ></polygon>
+              <polygon
+                class="cls-3"
+                points="1618 1371.97 784.5 1371.97 874.93 1211 1346 1211 923.1 456 1110.06 456 1618 1371.97"
+              ></polygon>
+              <g id="Layer_2" data-name="Layer 2">
+                <polygon
+                  class="cls-2"
+                  points="418 1372.74 509 1539 928 781 1162.32 1211 1346 1211 923.1 456 418 1372.74"
+                ></polygon>
+              </g>
+            </svg>
+          </div>
+          <span class="title">Visualize</span>
+        </span>
 
-            // Insert a new node at the end
-            async insert(value) {
-                if (isNaN(value)) {
-                    alert("Please enter a valid number to insert.");
-                    return;
-                }
-                let newNode = new Node(value);
-                if (!this.head) {
-                    this.head = newNode;
-                } else {
-                    let current = this.head;
-                    while (current.next) {
-                        current = current.next;
-                    }
-                    current.next = newNode;
-                }
-                await this.visualize();
-            }
 
-            // Delete a node by value
-            async delete(value) {
-                if (isNaN(value)) {
-                    alert("Please enter a valid number to delete.");
-                    return;
-                }
-                if (!this.head) return;
+        <div id="container"></div>
+        <div class="options">
+          <button id="generate">Generate Random</button>
+          <input type="text" id="userInput" required />
+          <button id="insert">Insert</button>
+          <button id="delete">Delete</button>
+          <button id="stop">Reset Visualizer</button>
+          <br /><br />
+          <label for="speedControl">Speed:</label>
+          <input type="range" id="speedControl" min="1" max="3" value="2" />
+        </div>
+      </div>
 
-                // If head needs to be deleted
-                if (this.head.value == value) {
-                    this.head = this.head.next;
-                    await this.visualize();
-                    return;
-                }
+      <br />
+      <br />
+      <br />
 
-                // Traverse to find the node to delete
-                let current = this.head;
-                while (current.next && current.next.value != value) {
-                    current = current.next;
-                }
+      <div class="about" id="about">
+        <p>
+          In computer science, a linked list is a linear collection of data
+          elements whose order is not given by their physical placement in
+          memory. Instead, each element points to the next. It is a data
+          structure consisting of a collection of nodes which together represent
+          a sequence. In its most basic form, each node contains data, and a
+          reference (in other words, a link) to the next node in the sequence.
+        </p>
 
-                if (current.next) {
-                    current.next = current.next.next;
-                }
-                await this.visualize();
-            }
+        <p>
+          This structure allows for efficient insertion or removal of elements
+          from any position in the sequence during iteration. More complex
+          variants add additional links, allowing more efficient insertion or
+          removal of nodes at arbitrary positions. A drawback of linked lists is
+          that data access time is linear in respect to the number of nodes in
+          the list. Because nodes are serially linked, accessing any node
+          requires that the prior node be accessed beforehand (which introduces
+          difficulties in pipelining). Faster access, such as random access, is
+          not feasible. Arrays have better cache locality compared to linked
+          lists.
+        </p>
+      </div>
+    </div>
 
-            // Visualize the linked list
-            async visualize() {
-                container.innerHTML = "";
-                let current = this.head;
+    <script src="https://cdn.jsdelivr.net/npm/motion@11.11.13/dist/motion.js"></script>
 
-                while (current) {
-                    let nodeElement = document.createElement("div");
-                    nodeElement.classList.add("node");
-                    nodeElement.textContent = current.value;
-
-                    let arrowElement = document.createElement("div");
-                    arrowElement.classList.add("arrow");
-                    arrowElement.textContent = "→";
-
-                    container.appendChild(nodeElement);
-                    if (current.next) {
-                        container.appendChild(arrowElement);
-                    }
-
-                    current = current.next;
-                    await new Promise(resolve => setTimeout(resolve, this.getSpeed()));
-                }
-
-                // Add NULL at the end
-                let nullElement = document.createElement("div");
-                nullElement.classList.add("null");
-                nullElement.textContent = "NULL";
-                container.appendChild(nullElement);
-            }
-
-            // Get speed value
-            getSpeed() {
-                let value = speedControl.value;
-                if (value == "1") {
-                    return 1000;
-                } else if (value == "2") {
-                    return 500;
-                } else if (value == "3") {
-                    return 100;
-                }
-            }
-        }
-
-        // Create LinkedList instance
-        let linkedList = new LinkedList();
-
-        // Event Listeners
-        generateBtn.addEventListener("click", async () => {
-            if (linkedList.head) {
-                alert("Linked list already generated! Use insert or delete to modify it.");
-                return;
-            }
-
-            let newArr = generateArr();
-            for (let value of newArr) {
-                await linkedList.insert(value);
-            }
-        });
-
-        insertBtn.addEventListener("click", async () => {
-            let value = parseInt(userInput.value.trim());
-            if (!isNaN(value)) {
-                await linkedList.insert(value);
-            } else {
-                alert("Please enter a valid number to insert.");
-            }
-            userInput.value = "";
-        });
-
-        deleteBtn.addEventListener("click", async () => {
-            let value = parseInt(userInput.value.trim());
-            if (!isNaN(value)) {
-                await linkedList.delete(value);
-            } else {
-                alert("Please enter a valid number to delete.");
-            }
-            userInput.value = "";
-        });
-
-        resetBtn.addEventListener("click", () => {
-            location.reload();
-        });
-
-        // Generate Random Array
-        function generateArr(size = 5) {
-            let arr = [];
-            for (let i = 0; i < size; i++) {
-                arr.push(Math.floor(Math.random() * 90) + 10); // Random numbers between 10 and 99
-            }
-            return arr;
-        }
-    </script>
-</body>
+    <script src="../../universal-js/slider.js"></script>
+    <script src="script.js"></script>
+  </body>
 </html>

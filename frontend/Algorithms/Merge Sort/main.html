@@ -1,156 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="../../universal-css/navbar.css">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../../universal-css/navbar.css" />
 
     <link
-    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
-    rel="stylesheet"
-  />
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
 
+    <link rel="stylesheet" href="../../universal-css/animationVisualize.css" />
 
-  <!-- Universal Css -->
-<link rel="stylesheet" href="../../universal-css/slider.css">
+    <!-- Universal Css -->
+    <link rel="stylesheet" href="../../universal-css/slider.css" />
 
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Google Font  -->
+  </head>
+  <body>
+    <!-- Navagation Bar -->
+    <nav>
+      <div class="hamBurger" id="hamBurger">
+        <i class="ri-collage-fill"></i>
+      </div>
 
-  <!-- Google Font -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
- <!-- Google Font  -->
+      <div class="logo" id="logo">
+        <a href="/">
+          <img src="../../assets/fullBlack.png" alt="" />
+        </a>
+      </div>
 
-</head>
-<body>
+      <div class="profile" id="profile">
+        <i class="ri-user-smile-fill"></i>
+      </div>
+    </nav>
 
+    <!-- Side Panel -->
+    <div class="sidePanel" id="SidePanel">
+      <nav>
+        <img src="../../assets/smallLogo.png" alt="" />
+        <i class="ri-arrow-go-back-line" id="closeSidePanel"></i>
+      </nav>
+      <div class="line"></div>
 
-        <!-- Navagation Bar -->
-        <nav>
-            <div class="hamBurger" id="hamBurger">
-              <i class="ri-collage-fill"></i>
-            </div>
-         
-            <div class="logo" id="logo">
-              <a href="/">
-                <img src="../../assets/fullBlack.png" alt="">
-              </a>
-            </div>
+      <!-- List Of Algorithms -->
+      <div class="menu-items" id="menu-items">
+        <li>Explore</li>
+        <a href="./Algorithms/Bubble Sort/main.html">
+          <li id="bubble">Bubble Sort</li>
+        </a>
+        <a href="./Algorithms/Merge Sort/main.html">
+          <li class="menu-items-active">Merge Sort</li>
+        </a>
+        <li>Linked List</li>
+      </div>
+    </div>
 
-            <div class="profile" id="profile">
-              <i class="ri-user-smile-fill"></i>
-            </div>
-          </nav>
+    <div class="canvas" id="canvas">
+      <!-- About Merge Sort -->
+      <h1>Merge Sort</h1>
+      <div class="about" id="about">
+        <p>
+          Merge sort is a sorting algorithm that follows the divide-and-conquer
+          approach. It works by recursively dividing the input array into
+          smaller subarrays and sorting those subarrays then merging them back
+          together to obtain the sorted array.
+        </p>
+        <p>
+          In simple terms, we can say that the process of merge sort is to
+          divide the array into two halves, sort each half, and then merge the
+          sorted halves back together. This process is repeated until the entire
+          array is sorted.
+        </p>
+        <h2>How does Merge Sort work?</h2>
+        <p>
+          Merge sort is a popular sorting algorithm known for its efficiency and
+          stability. It follows the divide-and-conquer approach to sort a given
+          array of elements.
+        </p>
+        <p>Here is a step-by-step explanation of how merge sort works:</p>
+        <ul>
+          <li>
+            Divide the list or array recursively into two halves until it can no
+            more be divided.
+          </li>
+          <li>
+            Each subarray is sorted individually using the merge sort algorithm.
+          </li>
+          <li>
+            The sorted subarrays are merged back together in sorted order. The
+            process continues until all elements from both subarrays have been
+            merged.
+          </li>
 
-<!-- Side Panel -->
-<div class="sidePanel" id="SidePanel">
-  <nav>
-      <img src="../../assets/smallLogo.png" alt="">
-      <i class="ri-arrow-go-back-line" id="closeSidePanel"></i>
-  </nav>
-  <div class="line"></div>
+          <p>
+            For Example we have array [1, 23, 42, 8, 5] <br />
+            Below is the Explanation:
+          </p>
+        </ul>
+      </div>
 
-  <!-- List Of Algorithms -->
-  <div class="menu-items" id="menu-items">
-      <li>Explore</li>
-      <a href="./Algorithms/Bubble Sort/main.html">
-        <li id="bubble">Bubble Sort</li>
-      </a>
-      <a href="./Algorithms/Merge Sort/main.html">
-        <li class="menu-items-active">Merge Sort</li>
-      </a>
-      <li >Linked List</li>
-  </div>
-</div>
-
-
-     <div class="canvas" id="canvas">
-       
-<!-- About Merge Sort -->
-<div class="about" id="about">
-  <h1>Merge Sort</h1>
-  <p>Merge sort is a sorting algorithm that follows the divide-and-conquer approach. It works by recursively dividing the input array into smaller subarrays and sorting those subarrays then merging them back together to obtain the sorted array.</p>
-  <p>In simple terms, we can say that the process of merge sort is to divide the array into two halves, sort each half, and then merge the sorted halves back together. This process is repeated until the entire array is sorted.</p>
-  <h2>How does Merge Sort work?</h2>
-  <p>
-    Merge sort is a popular sorting algorithm known for its efficiency and stability. It follows the divide-and-conquer approach to sort a given array of elements.
-  </p>
-  <p>Here is a step-by-step explanation of how merge sort works:</p>
-  <ul>
-    <li>Divide the list or array recursively into two halves until it can no more be divided.</li>
-    <li>Each subarray is sorted individually using the merge sort algorithm.</li>
-    <li>The sorted subarrays are merged back together in sorted order. The process continues until all elements from both subarrays have been merged.</li>
-
-    <p>For Example we have array [1, 23, 42, 8, 5]
-      <br> Below is the Explanation:
-    </p>
-  </ul>
- </div>
-
-
-        <div class="algo" id="algo">
-
-
-
-          <div class="numbers" id="numbers">
-            <div class="steps" id="step1">
-              <span>1</span>
-              <span>23</span>
-              <span>42</span>
-              <span>8</span>
-              <span>5</span>
-            </div>
-
-
-            <div class="steps" id="step2">
-              <span>1</span>
-              <span>23</span>
-              <span>42</span>
-              <div class="gap"></div>
-              <span>8</span>
-              <span>5</span>
-            </div>
-
-            <div class="steps" id="step3">
-              <span>1</span>
-              <span>23</span>
-              <div class="gap"></div>
-              <span>42</span>
-              <div class="gap"></div>
-              <span>8</span>
-              <div class="gap"></div>
-              <span>5</span>
-            </div>
-
-            <div class="steps" id="step4">
-              <span>1</span>
-              <div class="gap"></div>
-              <span>23</span>
-            </div>
-
-          
-          </div>
-
-
-
-          <div class="control" id="contol">
-            <button id="next">Next</button>
-            <button id="previous">Previous</button>
-          </div>
-
+      <div class="algo" id="algo">
+      <!-- Visualize animation -->
+      <span class="visualize">
+        <div id="triangle">
+          <svg
+            id="Layer_1"
+            data-name="Layer 1"
+            version="1.1"
+            viewBox="0 0 2000 2000"
+          >
+            <polygon
+              class="cls-1"
+              points="928 781 1021 951 784.5 1371.97 1618 1371.97 1530.32 1544 509 1539 928 781"
+            ></polygon>
+            <polygon
+              class="cls-3"
+              points="1618 1371.97 784.5 1371.97 874.93 1211 1346 1211 923.1 456 1110.06 456 1618 1371.97"
+            ></polygon>
+            <g id="Layer_2" data-name="Layer 2">
+              <polygon
+                class="cls-2"
+                points="418 1372.74 509 1539 928 781 1162.32 1211 1346 1211 923.1 456 418 1372.74"
+              ></polygon>
+            </g>
+          </svg>
         </div>
-       
+        <span class="title">Visualize</span>
+      </span>
 
-        
-     </div>
+        <div class="numbers" id="numbers">
+          <div class="steps" id="step1">
+            <span>1</span>
+            <span>23</span>
+            <span>42</span>
+            <span>8</span>
+            <span>5</span>
+          </div>
 
+          <div class="steps" id="step2">
+            <span>1</span>
+            <span>23</span>
+            <span>42</span>
+            <div class="gap"></div>
+            <span>8</span>
+            <span>5</span>
+          </div>
 
+          <div class="steps" id="step3">
+            <span>1</span>
+            <span>23</span>
+            <div class="gap"></div>
+            <span>42</span>
+            <div class="gap"></div>
+            <span>8</span>
+            <div class="gap"></div>
+            <span>5</span>
+          </div>
+
+          <div class="steps" id="step4">
+            <span>1</span>
+            <div class="gap"></div>
+            <span>23</span>
+          </div>
+        </div>
+
+        <div class="control" id="contol">
+          <button id="next">Next</button>
+          <button id="previous">Reset</button>
+        </div>
+      </div>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/motion@11.11.13/dist/motion.js"></script>
     <script src="script.js"></script>
     <script src="../../universal-js/slider.js"></script>
-
-</body>
+  </body>
 </html>

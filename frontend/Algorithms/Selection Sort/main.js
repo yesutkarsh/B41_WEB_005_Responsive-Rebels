@@ -25,10 +25,10 @@ generate.addEventListener("click",()=>{
     displayArr(newArr)
 })
 
-function generateArr(size = 20){
+function generateArr(size = 5){
     let arr = [];
     for(let i=0;i<size;i++){
-        arr.push(Math.floor(Math.random()*100)+10)
+        arr.push(Math.floor(Math.random()*100)+5)
     }
     return arr;
 }
