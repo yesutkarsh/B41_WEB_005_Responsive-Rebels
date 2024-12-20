@@ -47,21 +47,30 @@
     <!-- Side Panel -->
     <div class="sidePanel" id="SidePanel">
       <nav>
-        <img src="../../assets/smallLogo.png" alt="" />
+        <img src="./assets/smallLogo.png" alt="" />
         <i class="ri-arrow-go-back-line" id="closeSidePanel"></i>
       </nav>
       <div class="line"></div>
 
       <!-- List Of Algorithms -->
       <div class="menu-items" id="menu-items">
-        <li>Explore</li>
-        <a href="./Algorithms/Bubble Sort/main.html">
-          <li id="bubble">Bubble Sort</li>
+        <a href="/">
+          <li >Explore</li>
         </a>
-        <a href="./Algorithms/Merge Sort/main.html">
-          <li class="menu-items-active">Merge Sort</li>
+        <a href="../Bubble Sort/main.html">
+          <li>Bubble Sort</li>
         </a>
-        <li>Linked List</li>
+
+        <a href="../Merge Sort/main.html">
+          <li class="menu-items-active" id="merge">Merge Sort</li>
+        </a>
+        <a href="../Linked List/main.html">
+          <li id="linked">Linked List</li>
+        </a>
+
+        <a href="../Selection Sort/main.html"
+          ><li>Selection Sort</li></a
+        >
       </div>
     </div>
 
@@ -110,33 +119,33 @@
       </div>
 
       <div class="algo" id="algo">
-      <!-- Visualize animation -->
-      <span class="visualize">
-        <div id="triangle">
-          <svg
-            id="Layer_1"
-            data-name="Layer 1"
-            version="1.1"
-            viewBox="0 0 2000 2000"
-          >
-            <polygon
-              class="cls-1"
-              points="928 781 1021 951 784.5 1371.97 1618 1371.97 1530.32 1544 509 1539 928 781"
-            ></polygon>
-            <polygon
-              class="cls-3"
-              points="1618 1371.97 784.5 1371.97 874.93 1211 1346 1211 923.1 456 1110.06 456 1618 1371.97"
-            ></polygon>
-            <g id="Layer_2" data-name="Layer 2">
+        <!-- Visualize animation -->
+        <span class="visualize">
+          <div id="triangle">
+            <svg
+              id="Layer_1"
+              data-name="Layer 1"
+              version="1.1"
+              viewBox="0 0 2000 2000"
+            >
               <polygon
-                class="cls-2"
-                points="418 1372.74 509 1539 928 781 1162.32 1211 1346 1211 923.1 456 418 1372.74"
+                class="cls-1"
+                points="928 781 1021 951 784.5 1371.97 1618 1371.97 1530.32 1544 509 1539 928 781"
               ></polygon>
-            </g>
-          </svg>
-        </div>
-        <span class="title">Visualize</span>
-      </span>
+              <polygon
+                class="cls-3"
+                points="1618 1371.97 784.5 1371.97 874.93 1211 1346 1211 923.1 456 1110.06 456 1618 1371.97"
+              ></polygon>
+              <g id="Layer_2" data-name="Layer 2">
+                <polygon
+                  class="cls-2"
+                  points="418 1372.74 509 1539 928 781 1162.32 1211 1346 1211 923.1 456 418 1372.74"
+                ></polygon>
+              </g>
+            </svg>
+          </div>
+          <span class="title">Visualize</span>
+        </span>
 
         <div class="numbers" id="numbers">
           <div class="steps" id="step1">
