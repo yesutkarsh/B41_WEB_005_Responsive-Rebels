@@ -1,0 +1,19 @@
+/* nav bar */
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px;
+    font-size: 30px;
+    gap: 20px;
+    color: white;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+
+nav .logo img{
+    height: 30px;
+} 
+

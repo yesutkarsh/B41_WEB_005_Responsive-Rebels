@@ -1,0 +1,65 @@
+
+/* Side Panel */
+.sidePanel{
+    position: fixed;
+    width: 300px;
+    height: 100vh;
+    display: none;
+    flex-direction: column;
+    background-color: #131313;
+    top: 0;
+    border-right: 1px solid rgba(255, 255, 255, 0.138);
+    box-shadow: 0px 0px 100px 0px rgba(154, 167, 118, 0.138);
+    z-index: 999;
+}
+.sidePanel i{
+    font-size: 20px;
+    color: whitesmoke;
+}
+.sidePanel nav{
+    display: flex;
+    align-items: center;
+}
+.sidePanel nav img{
+    height: 25px;
+}
+
+.line{
+    height: 1px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.119);
+}
+
+.sidePanel .menu-items{
+    font-family: "Roboto", serif;
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 20px;
+    color: white;
+    font-size: 20px;
+}
+
+.sidePanel .menu-items li{
+    padding: 10px;
+    width: 200px;
+    border-radius: 12px;
+    list-style: none;
+    cursor: pointer;
+}
+.sidePanel .menu-items li:hover{
+    background-color: rgba(0, 0, 0, 0.587);
+}
+/* If Menu Is Active */
+.sidePanel .menu-items-active::before{
+    content: "";
+    height: 25px;
+    width: 5px;
+    background-color: whitesmoke;
+    position: absolute;
+    left: 0;
+    margin-top:0px;
+    border-radius: 0px 10px 10px 0px;
+}
