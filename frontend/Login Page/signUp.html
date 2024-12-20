@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            font-family: 'Roboto', sans-serif;
+        }
+        label {
+            color: white;
+        }
+        #Login_Box {
+            padding: 5rem;
+            border: 2px solid grey;
+            width: 20rem;
+            margin-top: 5rem;
+            border-radius: 5rem;
+            height: 20rem;
+        }
+        #email {
+            width: 90%;
+            margin-top: 1rem;
+            margin-bottom: 2rem;
+        }
+        #pass {
+            width: 90%;
+            margin-top: 1rem;
+            margin-bottom: 2rem;
+        }
+        button {
+            width: 90%;
+            padding: 0.5rem;
+            background-color: #007bff;
+            border: none;
+            border-radius: 3px;
+            color: white;
+            cursor: pointer;
+            font-size: 16px; 
+            font-weight: 700;
+            transition: background-color 0.3s ease;
+        }
+        a {
+            color: blue;
+            text-decoration: none;
+        }
+        p:hover {
+            cursor: pointer;
+        }
+        #name {
+            width: 90%;
+            margin-bottom: 2rem;
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div id="Login_Box">
+        <label for="name" id="nameLabel">Enter Your Name: </label><br>
+        <input type="text" id="name"><br>
+        <label for="email" id="emailLabel">Enter Your Email:</label><br>
+        <input type="email" id="email"><br>
+        <label for="pass" id="passLabel">Create a Password: </label><br>
+        <input type="password" id="pass"><br>
+        <button type="submit" id="signUp">SignUp</button>
+        <a href="Login.html"><p>Existing User? Login Here</p></a>
+    </div>
+
+
+<script type="module">
+
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js";
+    import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-auth.js";
+    import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-database.js";
+  </script>
+  
+  <script src="singUp.js"></script>
+</body>
+</html>
