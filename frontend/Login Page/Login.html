@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <style>
+        body{
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            font-family: "Roboto", sans-serif;
+        }
+        label{
+            color: white;
+        }
+        #Login_Box{
+            padding: 5rem;
+            border: 2px solid grey;
+            width: 20rem;
+            margin-top: 5rem;
+            border-radius: 5rem;
+            height: 20rem;
+        }
+        #email{
+            width: 90%;
+            margin-top: 1rem;
+            margin-bottom: 3rem;
+        }
+        #pass{
+            width: 90%;
+            margin-top: 1rem;
+            margin-bottom: 3rem;
+        }
+        button{
+            width: 90%;
+            padding: 0.5rem;
+            background-color: #007bff;
+            border: none;
+            border-radius: 3px;
+            color: white;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 700;
+            transition: background-color 0.3 ease;
+        }
+        a{
+            color: blue;
+            text-decoration: none;
+        }
+        p:hover{
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="Login_Box">
+        <label for="email" id="emailLabel">Enter Your Email :</label><br>
+        <input type="email" id="email"><br>
+        <label for="pass" id="passLabel">Enter Your Password :</label><br>
+        <input type="password" id="pass"><br>
+        <button type="submit">Login</button><br>
+        <a href="signUp.html"><p>New User? SignUp Here</p></a>
+    </div>
+</body>
+</html>
+
+<script type="module">
+    import {initializeApp} from "https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js";
+    import {getAuth , signInWithEmailAndPassword} from "https://www.gstatic.com/firebasejs/9.22.0/firebase-auth.js";
+
+</script>
+<script type="module" src="login.js"></script>
