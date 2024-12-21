@@ -1,20 +1,98 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="../../universal-css/about.css">
+    <link rel="stylesheet" href="../../universal-css/slider.css">
+    <link rel="stylesheet" href="../../universal-css/navbar.css">
+    <link rel="stylesheet" href="../../universal-css/animationVisualize.css">
+
+
+      <!-- Google Font -->
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet"
+      />
+      <!-- Google Font  -->
+
 </head>
 <body>
-    <div class="container">
-        <h1>Queue Visualizer</h1>
-        
-        <div id="input-container">
-            <input type="text" id="element-input" placeholder="Enter value">
+
+
+
+    
+    <nav>
+        <div class="hamBurger" id="hamBurger">
+          <i class="ri-collage-fill"></i>
+        </div>
+  
+        <div class="logo" id="logo">
+          <a href="/">
+            <img src="../../assets/fullBlack.png" alt="" />
+          </a>
         </div>
         
+        <div class="profile" id="profile">
+          <i class="ri-user-smile-fill"></i>
+        </div>
+      </nav>
+      
+      
+      <!-- Side Panel -->
+      <div class="sidePanel" id="SidePanel">
+          <nav>
+              <img src="../../assets/smallLogo.png" alt="">
+              <i class="ri-arrow-go-back-line" id="closeSidePanel"></i>
+            </nav>
+            <div class="line"></div>
+  
+            <!-- List Of Algorithms -->
+            <div class="menu-items" id="menu-items">
+                <a href="../../Algorithms_Page/index.html">
+                    <li class="menu-items-active">Explore</li>
+                </a>
+                <a href="./Algorithms/Bubble Sort/main.html">
+                    <li>Bubble Sort</li>
+                </a>
+                
+                <a href="./Algorithms/Merge Sort/main.html">
+                    <li id="merge">Merge Sort</li>
+                </a>
+                <a href="./Algorithms/Linked List/main.html">
+                    <li id="linked">Linked List</li>
+                </a>
+                
+                <a href="./Algorithms/Selection Sort/main.html"><li>Selection Sort</li></a>
+                
+                <a href="./Algorithms/Queue/index.html"><li>Queue</li></a>
+                
+              <a href="./Algorithms/Two Pointer/main.html"><li>Two pointer</li></a>
+              
+              <a href="./Algorithms/Binary Search/main.html"><li>Binary Search</li></a>
+              
+              
+  
+            </div>
+        </div>
+<center>
+    <h1>Queue</h1>
+</center>
+    <div class="container">
+        <div class="queue-container" id="queue-display"></div>
+<br>        
+<div id="input-container">
+    <input type="text" id="element-input" placeholder="Enter value">
+</div>
         <div class="controls">
             <button class="btn" onclick="enqueue()">Enqueue</button>
             <button class="btn" onclick="dequeue()">Dequeue</button>
@@ -24,12 +102,44 @@
             <button class="btn" onclick="clearQueue()">Clear Queue</button>
         </div>
         
-        <div class="queue-container" id="queue-display"></div>
         <div class="message" id="message"></div>
+
+        
     </div>
 
+<center>
 
+
+         <!-- about -->
+         <div class="about" id="about">
+            <p>
+              Selection Sort is a comparison-based sorting algorithm. It sorts an
+              array by repeatedly selecting the smallest (or largest) element from
+              the unsorted portion and swapping it with the first unsorted element.
+              This process continues until the entire array is sorted.
+            </p>
+            <ol>
+              <li>
+                First we find the smallest element and swap it with the first
+                element. This way we get the smallest element at its correct
+                position.
+              </li>
+              <li>
+                Then we find the smallest among remaining elements (or second
+                smallest) and swap it with the second element.
+              </li>
+              <li>
+                We keep doing this until we get all elements moved to correct
+                position.
+              </li>
+            </ol>
+          </div>
+</center>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/motion@11.11.13/dist/motion.js"></script>
+    <script src="../../universal-js/slider.js"></script>
+    <script src="index.js"></script>
     
 </body>
 </html>
-<script src="index.js"></script>

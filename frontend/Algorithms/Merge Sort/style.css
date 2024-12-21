@@ -1,6 +1,7 @@
 body{
     background-color: black;
     margin: 0;
+    padding: 0;
     width: 100%;
     height: 100%;
     font-family: Roboto;
@@ -129,25 +130,6 @@ body{
 
 
 
-
-
-#about{
-    box-shadow: 1px 1px 100px 1px rgba(0, 0, 0, 0.096);
-    max-height: 250px;
-    overflow-x: hidden;
-    margin: 20px;
-    padding: 20px;
-    background-color: #f5f5f5;
-    width: 90%;
-    border-radius: 12px;
-}
-#about h1{
-    font-weight: 500;
-}
-
-#about h2{
-    font-weight: 400;
-}
 
 
 

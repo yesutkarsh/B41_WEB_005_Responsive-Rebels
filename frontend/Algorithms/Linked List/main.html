@@ -24,6 +24,7 @@
     <!-- Google Font  -->
 
     <link rel="stylesheet" href="../../universal-css/slider.css" />
+    <link rel="stylesheet" href="../../universal-css/about.css">
   </head>
   <body>
     <!-- Navagation Bar -->
@@ -54,7 +55,7 @@
       <!-- List Of Algorithms -->
       <div class="menu-items" id="menu-items">
         <a href="/">
-          <li >Explore</li>
+          <li>Explore</li>
         </a>
         <a href="../Bubble Sort/main.html">
           <li>Bubble Sort</li>
@@ -67,41 +68,13 @@
           <li class="menu-items-active" id="linked">Linked List</li>
         </a>
 
-        <a href="../Selection Sort/main.html"
-          ><li>Selection Sort</li></a
-        >
+        <a href="../Selection Sort/main.html"><li>Selection Sort</li></a>
       </div>
     </div>
 
     <h1>Linked List</h1>
     <div class="linkedList">
-      <div class="about" id="about">
-        <p>
-          In computer science, a linked list is a linear collection of data
-          elements whose order is not given by their physical placement in
-          memory. Instead, each element points to the next. It is a data
-          structure consisting of a collection of nodes which together represent
-          a sequence. In its most basic form, each node contains data, and a
-          reference (in other words, a link) to the next node in the sequence.
-        </p>
-
-        <p>
-          This structure allows for efficient insertion or removal of elements
-          from any position in the sequence during iteration. More complex
-          variants add additional links, allowing more efficient insertion or
-          removal of nodes at arbitrary positions. A drawback of linked lists is
-          that data access time is linear in respect to the number of nodes in
-          the list. Because nodes are serially linked, accessing any node
-          requires that the prior node be accessed beforehand (which introduces
-          difficulties in pipelining). Faster access, such as random access, is
-          not feasible. Arrays have better cache locality compared to linked
-          lists.
-        </p>
-      </div>
-
-
       <div class="algorithm" id="algorithm">
-      <!-- Visualize animation -->
         <span class="visualize">
           <div id="triangle">
             <svg
@@ -129,7 +102,6 @@
           <span class="title">Visualize</span>
         </span>
 
-
         <div id="container"></div>
         <div class="options">
           <button id="generate">Generate Random</button>
@@ -142,10 +114,6 @@
           <input type="range" id="speedControl" min="1" max="3" value="2" />
         </div>
       </div>
-
-      <br />
-      <br />
-      <br />
 
       <div class="about" id="about">
         <p>
@@ -170,9 +138,16 @@
           lists.
         </p>
       </div>
+
+
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/motion@11.11.13/dist/motion.js"></script>
+
+
+
+
+
 
     <script src="../../universal-js/slider.js"></script>
     <script src="script.js"></script>
