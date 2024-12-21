@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background: #000; /* Black background */
+    color: #fff;
+    padding: 20px;
+}
+
+/* Header */
+.header {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.header h1 {
+    font-size: 2.5em;
+    color: #fff;
+}
+
+.header p {
+    font-size: 1.2em;
+    margin-top: 10px;
+    color: #aaa;
+}
+
+/* Algorithm List */
+.algorithm-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.algorithm-card {
+    background: #1a1a1a; /* Dark card background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.algorithm-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.7);
+}
+
+.algorithm-card h3 {
+    margin-bottom: 10px;
+    color: #fff;
+    font-size: 1.5em;
+}
+
+.algorithm-card p {
+    margin-bottom: 15px;
+    color: #ccc;
+}
+
+.algorithm-card a {
+    display: inline-block;
+    color: #fff;
+    font-size: 0.9em;
+    margin-top: 15px;
+    text-decoration: none;
+    position: relative;
+    padding-right: 20px;
+}
+
+.algorithm-card a:after {
+    content: "→";
+    position: absolute;
+    right: 0;
+    font-size: 1em;
+}
+
+/* Icon Styling */
+.algorithm-icon {
+    font-size: 40px;
+    color: #2d89ef;
+    margin-bottom: 10px;
+}
