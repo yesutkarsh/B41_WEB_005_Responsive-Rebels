@@ -18,6 +18,8 @@
    <!-- Universal css -->
     <link rel="stylesheet" href="./universal-css/navbar.css">
     <link rel="stylesheet" href="./universal-css/slider.css">
+    <link rel="stylesheet" href="./universal-css/searchBar.css">
+
 
 
     <link rel="stylesheet" href="style.css">
@@ -61,12 +63,17 @@
             </a>
 
             <a href="./Algorithms/Selection Sort/main.html"><li>Selection Sort</li></a>
+
+            <a href="./Algorithms/Queue/index.html"><li>Queue</li></a>
+
+            <a href="./Algorithms/Two Pointer/main.html"><li>Two pointer</li></a>
          
             
 
         </div>
     </div>
 
+    
 
 
     <!-- Hero Section -->
@@ -75,21 +82,102 @@
             <img src="./assets/logo.png" alt="">
         </div>
 
-        <div class="searchBar" id="searchBar">
-            <i class="ri-search-line"></i>
-            <input type="text" placeholder="Search for Algorithm or ctrk+k"/>
-          </div>
-          <br>
-          <div class="aiEditor">
-            <span>------ Or ------</span>
-            <span>Open AI Code Editor</span>
-          </div>
+
+        <div class="search-container">
+            <div class="search-wrapper">
+                <button class="search-button" id="searchBtn">
+                    <i class="ri-search-line"></i>
+                    <span>Search algorithms</span>
+                    <div class="shortcut-hint">⌘ ctrl + K</div>
+                </button>
+            </div>
+        </div>
+
+        <!-- Search Modal -->
+        <div class="search-modal" id="searchModal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="search-input-wrapper">
+                        <i class="ri-search-line"></i>
+                        <input type="text" id="searchInput" placeholder="Type to search algorithms...">
+                    </div>
+                    <button class="close-modal" id="closeModal">
+                        <i class="ri-close-line"></i>
+                    </button>
+                </div>
+                <div class="search-results" id="searchResults">
+                    <!-- Results will be populated dynamically -->
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="algorithm-cards-container">
+            <div class="algorithm-cards">
+                <div class="card">
+                    <div class="card-icon">
+                        <i class="ri-stack-line"></i>
+                    </div>
+                    <h3>Stack</h3>
+                    <p>Last-In-First-Out (LIFO) data structure for storing and managing data.</p>
+                    <a href="./Algorithms/Stack/main.html" class="card-link">
+                        Learn More <i class="ri-arrow-right-line"></i>
+                    </a>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">
+                        <i class="ri-queue-line"></i>
+                    </div>
+                    <h3>Queue</h3>
+                    <p>First-In-First-Out (FIFO) data structure for sequential processing.</p>
+                    <a href="./Algorithms/Queue/index.html" class="card-link">
+                        Learn More <i class="ri-arrow-right-line"></i>
+                    </a>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">
+                        <i class="ri-git-merge-line"></i>
+                    </div>
+                    <h3>Two Pointer</h3>
+                    <p>Technique using two pointers to solve array-based problems efficiently.</p>
+                    <a href="./Algorithms/Two Pointer/main.html" class="card-link">
+                        Learn More <i class="ri-arrow-right-line"></i>
+                    </a>
+                </div>
+            </div>
+
+            <button class="more-btn" id="moreAlgorithms">
+                <span>More Algorithms</span>
+                <i class="ri-arrow-down-line"></i>
+            </button>
+
+  
+
+            <script>
+                document.getElementById('moreAlgorithms').addEventListener('click', function() {
+                    const searchBtn = document.getElementById('searchBtn');
+                    if (searchBtn) {
+                        searchBtn.click();
+                    }
+                });
+            </script>
+        </div>
+
+
+
+
+          
     </div>
 
 
     <script src="https://cdn.jsdelivr.net/npm/motion@11.11.13/dist/motion.js"></script>
 
     <!-- universal scripts -->
+     <script type="module" src="./universal-js/searchBar.mjs"></script>
     <script src="./universal-js/slider.js"></script>r
   </body>
 </html>
+

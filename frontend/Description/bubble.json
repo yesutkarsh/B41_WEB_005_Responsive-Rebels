@@ -1,0 +1,30 @@
+{
+    "name": "Bubble Sort",
+    "description": "Bubble Sort is a simple comparison-based sorting algorithm that repeatedly steps through the list, compares adjacent elements, and swaps them if they are in the wrong order. This process continues until the list is sorted.",
+    "steps": [
+      "Step 1: Start from the first element of the array.",
+      "Step 2: Compare the current element with the next element.",
+      "Step 3: If the current element is greater than the next element, swap them.",
+      "Step 4: Move to the next pair of adjacent elements and repeat the comparison and swap steps if necessary.",
+      "Step 5: At the end of each pass, the largest unsorted element is placed in its correct position.",
+      "Step 6: Repeat the process for the remaining unsorted elements until the entire array is sorted."
+    ],
+    "usage": [
+      "Usage 1: Used in educational settings to teach sorting algorithms due to its simplicity.",
+      "Usage 2: Suitable for small datasets or cases where simplicity is prioritized over efficiency."
+    ],
+    "complexity": {
+      "time": "O(n^2) in the worst and average cases; O(n) in the best case when the array is already sorted.",
+      "space": "O(1), as it is an in-place sorting algorithm."
+    },
+    "related_concepts": [
+      "Selection Sort: Another simple comparison-based sorting algorithm.",
+      "Insertion Sort: A sorting algorithm with similar simplicity but better performance on partially sorted arrays.",
+      "Sorting Algorithms: The general category of algorithms for arranging elements in a specific order."
+    ],
+    "interesting_facts": [
+      "Fact 1: Bubble Sort is one of the simplest sorting algorithms but is rarely used in practice due to its inefficiency on large datasets.",
+      "Fact 2: It is sometimes called 'sinking sort' because larger elements sink to the bottom of the list as the algorithm progresses."
+    ]
+  }
+  

@@ -1,0 +1,31 @@
+{
+    "name": "Two Pointer Technique",
+    "description": "The Two Pointer technique is an algorithmic approach used for solving problems on arrays or lists. It involves using two pointers that traverse the data structure in a specific manner, often starting from opposite ends or moving sequentially.",
+    "steps": [
+      "Step 1: Initialize two pointers, often referred to as left and right, based on the problem requirements.",
+      "Step 2: Move the pointers toward a target condition, such as finding a specific pair or subset.",
+      "Step 3: At each step, check the condition, update pointers accordingly, and perform required operations (e.g., summation, comparison).",
+      "Step 4: Continue adjusting the pointers until the target condition is met or the pointers overlap.",
+      "Step 5: Return or process the results based on the pointer traversal."
+    ],
+    "usage": [
+      "Usage 1: Finding a pair of elements in a sorted array that sum to a given target.",
+      "Usage 2: Solving problems involving palindromes by comparing characters from both ends.",
+      "Usage 3: Merging two sorted arrays in a single pass.",
+      "Usage 4: Removing duplicates or rearranging elements based on specific constraints."
+    ],
+    "complexity": {
+      "time": "O(n), as the pointers traverse the array at most once.",
+      "space": "O(1), as the technique uses constant additional space."
+    },
+    "related_concepts": [
+      "Sliding Window: A similar technique for problems involving subarrays or substrings.",
+      "Binary Search: Often combined with Two Pointer for efficient searches in sorted arrays.",
+      "Greedy Algorithms: Problems that can be solved by making optimal choices using two pointers."
+    ],
+    "interesting_facts": [
+      "Fact 1: The Two Pointer technique is highly efficient for sorted data, as it avoids nested loops.",
+      "Fact 2: It is a common approach in competitive programming and interview problems due to its simplicity and efficiency."
+    ]
+  }
+  
