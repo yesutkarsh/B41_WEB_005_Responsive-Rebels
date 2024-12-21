@@ -1,5 +1,3 @@
-
-
 /* From Uiverse.io by BlackisPlay */ 
 .cls-1 {
     fill: #f15a24;
@@ -84,7 +82,7 @@
     height: 100px;
     width: 100px;
     padding-top: 30px;
-    animation: triangle 4s both infinite;
+    /* animation: triangle 4s both infinite; */
   }
   
   @keyframes triangle {
@@ -93,11 +91,11 @@
     }
   
     50% {
-      transform: translateY(2px);
+      /* transform: translateY(10px); */
     }
   
     100% {
-      transform: translateY(0px);
+      /* transform: translateY(0px); */
     }
   }
   
@@ -106,19 +104,14 @@
 .visualize{
     width: 90%;
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     /* justify-content: center; */
     position: relative;
-    left: 0;
-    margin-left: 10px;
+    /* left: 0; */
+    /* margin-left: 10px; */
 }
 .visualize span{
     position: absolute;
     margin-left: 100px;
-    top: 47%;
-    color: #f15c24;
-}
-.title{
-    font-size: 30px;
-    font-weight: 600;
+    top: 55%;
 }

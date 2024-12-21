@@ -5,6 +5,7 @@
 }
 body{
     background-color: black;
+    font-family: Roboto;
 }
 
 i{
@@ -24,11 +25,10 @@ i{
 }
 .logo img{
     height: 70px;
-    margin-bottom: 100px;
     margin-top: 100px;
 }
 
-
+/* 
 .hero .searchBar{
     padding: 5px;
     display: flex;
@@ -70,4 +70,110 @@ i{
 a{
     text-decoration: none;
     color: white;
+} */
+
+
+
+.algorithm-cards-container {
+    padding: 2rem;
+    max-width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.algorithm-cards {
+    display: flex;
+    gap: 2rem;
+    overflow-x: auto;
+    padding-bottom: 1rem;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    scrollbar-color: #4caf4f00 transparent;
+}
+
+
+
+.algorithm-cards::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.algorithm-cards::-webkit-scrollbar-thumb {
+    background-color: #4CAF50;
+    border-radius: 3px;
+}
+
+.card {
+    /* flex: 0 0 300px; */
+    margin-top: 100px;
+    color: white;
+    background: rgba(36, 35, 35, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    padding: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.card:hover {
+    /* transform: translateY(-5px); */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #ececec;
+}
+
+.card p {
+    color: #b9b9b9;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.card-link {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    color: #f8f8f8;
+    font-weight: 500;
+    gap: 0.5rem;
+    font-weight: 300;
+    transition: gap 0.3s ease;
+}
+
+
+.more-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background: #0e0e0e;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin: 2rem auto 0;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+
+
+@media (max-width: 768px) {
+    .algorithm-cards-container {
+        padding: 1rem;
+    }
+
+    .card {
+        flex: 0 0 260px;
+        padding: 1.5rem;
+    }
 }
