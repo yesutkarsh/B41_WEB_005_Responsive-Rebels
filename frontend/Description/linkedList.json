@@ -1,0 +1,34 @@
+{
+    "name": "Linked List",
+    "description": "A Linked List is a linear data structure where elements, called nodes, are stored in memory with each node pointing to the next node in the sequence. It provides dynamic memory allocation and efficient insertion and deletion.",
+    "steps": [
+      "Step 1: Initialize a head node as the starting point of the linked list.",
+      "Step 2: Each node contains data and a reference (or pointer) to the next node.",
+      "Step 3: Traverse the linked list by following the references from one node to the next.",
+      "Step 4: To insert a node, adjust the pointers to include the new node in the desired position.",
+      "Step 5: To delete a node, bypass it by updating the pointer of the previous node to point to the next node."
+    ],
+    "usage": [
+      "Usage 1: Used to implement stacks, queues, and other dynamic data structures.",
+      "Usage 2: Suitable for scenarios where frequent insertions and deletions are needed.",
+      "Usage 3: Used in applications like memory management, where dynamic allocation is required."
+    ],
+    "complexity": {
+      "time": {
+        "search": "O(n), as traversal is needed to find an element.",
+        "insert": "O(1) for inserting at the head; O(n) for inserting at the end.",
+        "delete": "O(1) if the node reference is given; O(n) if searching for the node."
+      },
+      "space": "O(n), as it requires memory for each node and its pointer."
+    },
+    "related_concepts": [
+      "Arrays: Another linear data structure with contiguous memory allocation.",
+      "Doubly Linked List: A variant where each node has pointers to both the previous and the next node.",
+      "Circular Linked List: A variant where the last node points back to the first node."
+    ],
+    "interesting_facts": [
+      "Fact 1: Linked lists are the foundation for many advanced data structures like hash tables and graphs.",
+      "Fact 2: Unlike arrays, linked lists do not require resizing as they grow dynamically."
+    ]
+  }
+  

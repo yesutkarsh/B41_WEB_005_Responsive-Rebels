@@ -1,0 +1,33 @@
+{
+    "name": "Queue",
+    "description": "A Queue is a linear data structure that follows the First-In-First-Out (FIFO) principle, where elements are inserted from the rear (enqueue) and removed from the front (dequeue).",
+    "steps": [
+      "Step 1: Initialize an empty queue.",
+      "Step 2: To add an element, insert it at the rear of the queue (enqueue operation).",
+      "Step 3: To remove an element, retrieve and delete it from the front of the queue (dequeue operation).",
+      "Step 4: Check if the queue is empty or full using appropriate conditions.",
+      "Step 5: Repeat operations as required, maintaining the FIFO order."
+    ],
+    "usage": [
+      "Usage 1: Used in task scheduling, such as in operating systems for process management.",
+      "Usage 2: Implements breadth-first search (BFS) in graph traversal algorithms.",
+      "Usage 3: Used in printer task scheduling or request handling in web servers."
+    ],
+    "complexity": {
+      "time": {
+        "enqueue": "O(1), as the element is added to the rear of the queue.",
+        "dequeue": "O(1), as the element is removed from the front of the queue."
+      },
+      "space": "O(n), where n is the number of elements in the queue."
+    },
+    "related_concepts": [
+      "Stack: Another linear data structure that uses Last-In-First-Out (LIFO) order.",
+      "Priority Queue: A variant of the queue where elements are dequeued based on priority.",
+      "Deque: A double-ended queue where elements can be added or removed from both ends."
+    ],
+    "interesting_facts": [
+      "Fact 1: Queues are used in computer science to handle resource sharing and synchronization problems.",
+      "Fact 2: Real-life examples of queues include waiting lines in stores and call centers."
+    ]
+  }
+  

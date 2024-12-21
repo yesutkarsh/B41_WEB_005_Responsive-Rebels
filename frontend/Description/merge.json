@@ -1,0 +1,32 @@
+{
+    "name": "Merge Sort",
+    "description": "Merge Sort is a divide-and-conquer sorting algorithm that divides the input array into two halves, recursively sorts the two halves, and then merges them back together in sorted order.",
+    "steps": [
+      "Step 1: Divide the unsorted list into n sublists, each containing one element.",
+      "Step 2: Repeatedly merge sublists to produce new sorted sublists until there is only one sublist remaining.",
+      "Step 3: During the merge step, compare the elements from each sublist and arrange them in sorted order.",
+      "Step 4: Continue the merging process recursively until the entire array is sorted."
+    ],
+    "usage": [
+      "Usage 1: Used in scenarios where stable sorting is required (elements with equal values retain their relative order).",
+      "Usage 2: Often used in external sorting where large datasets cannot fit into memory."
+    ],
+    "complexity": {
+      "time": {
+        "average": "O(n log n), as the array is split in half at each step and then merged.",
+        "worst": "O(n log n), the merge operation takes linear time, and splitting the array takes logarithmic time.",
+        "best": "O(n log n), as the algorithm divides and merges regardless of input order."
+      },
+      "space": "O(n), as it requires additional space for the temporary arrays during merging."
+    },
+    "related_concepts": [
+      "Divide and Conquer: The algorithm divides the problem into smaller subproblems, solves them, and combines the results.",
+      "Quick Sort: Another divide-and-conquer sorting algorithm with similar time complexity but faster in practice for most inputs.",
+      "Stable Sorting: Merge Sort maintains the relative order of equal elements."
+    ],
+    "interesting_facts": [
+      "Fact 1: Merge Sort is one of the few algorithms that can guarantee O(n log n) time complexity in both worst and average cases.",
+      "Fact 2: Despite being efficient, Merge Sort is not in-place, meaning it requires additional memory for merging."
+    ]
+  }
+  
