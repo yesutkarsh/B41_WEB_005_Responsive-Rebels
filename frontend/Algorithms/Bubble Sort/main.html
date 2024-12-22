@@ -37,21 +37,21 @@
       </div>
 
       <div class="profile" id="profile">
-        <i class="ri-user-smile-fill"></i>
+        <!-- <i class="ri-user-smile-fill"></i> -->
       </div>
     </nav>
 
     <!-- Side Panel -->
     <div class="sidePanel" id="SidePanel">
       <nav>
-        <img src="./assets/smallLogo.png" alt="" />
+        <img src="../../assets/fullBlack.png" alt="" />
         <i class="ri-arrow-go-back-line" id="closeSidePanel"></i>
       </nav>
       <div class="line"></div>
 
       <!-- List Of Algorithms -->
       <div class="menu-items" id="menu-items">
-        <a href="/">
+        <a href="../../Algorithms_Page/index.html">
           <li>Explore</li>
         </a>
         <a href="../Bubble Sort/main.html">
@@ -65,9 +65,13 @@
           <li id="linked">Linked List</li>
         </a>
 
-        <a href="../Selection Sort/main.html"
-          ><li class="menu-items-active">Selection Sort</li></a
-        >
+        <a href="../Selection Sort/main.html"><li>Selection Sort</li></a>
+
+        <a href="../Queue/index.html"><li>Queue</li></a>
+
+        <a href="../Two Pointer/main.html"><li>Two pointer</li></a>
+
+        <a href="../Binary Search/main.html"><li>Binary Search</li></a>
       </div>
     </div>
 
@@ -121,30 +125,27 @@
 
       <br /><br /><br /><br />
 
-
-
       <!-- about -->
       <div class="about" id="about">
         <p>
-          Bubble Sort is a simple comparison-based sorting algorithm. It works by repeatedly 
-          stepping through the list, comparing adjacent elements and swapping them if they 
-          are in the wrong order. The pass through the list is repeated until no more swaps 
-          are needed, which means the list is sorted.
+          Bubble Sort is a simple comparison-based sorting algorithm. It works
+          by repeatedly stepping through the list, comparing adjacent elements
+          and swapping them if they are in the wrong order. The pass through the
+          list is repeated until no more swaps are needed, which means the list
+          is sorted.
         </p>
         <ol>
           <li>
-            Start with the first element and compare it with the next element. 
+            Start with the first element and compare it with the next element.
             If the first element is greater than the second element, swap them.
           </li>
           <li>
-            Move to the next pair of adjacent elements and repeat the comparison 
+            Move to the next pair of adjacent elements and repeat the comparison
             and swapping if necessary.
           </li>
+          <li>Continue this process until the end of the array is reached.</li>
           <li>
-            Continue this process until the end of the array is reached.
-          </li>
-          <li>
-            Repeat the above steps for each pass through the array until no more 
+            Repeat the above steps for each pass through the array until no more
             swaps are needed.
           </li>
         </ol>
@@ -157,7 +158,10 @@
           <li>Best Case (already sorted): O(n)</li>
           <li>Average Case: O(n²)</li>
           <li>Worst Case (reverse sorted): O(n²)</li>
-          <li>Space Complexity: O(1) as only a single additional memory space is required</li>
+          <li>
+            Space Complexity: O(1) as only a single additional memory space is
+            required
+          </li>
         </ul>
       </div>
 
@@ -167,11 +171,13 @@
           <li>Enter positive numbers separated by commas (e.g., 5, 10, 15)</li>
           <li>Maximum recommended input: 125</li>
           <li>Maximum array size: 50 numbers</li>
-          <li>Larger numbers will be automatically scaled to fit the display</li>
+          <li>
+            Larger numbers will be automatically scaled to fit the display
+          </li>
         </ul>
       </div>
     </div>
-      <!-- about -->
+    <!-- about -->
 
     <script src="https://cdn.jsdelivr.net/npm/motion@11.11.13/dist/motion.js"></script>
     <script src="../../universal-js/slider.js"></script>

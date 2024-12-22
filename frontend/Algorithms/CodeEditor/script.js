@@ -6,7 +6,7 @@ require.config({
 
 require(['vs/editor/editor.main'], function () {
     var editor = monaco.editor.create(document.getElementById('monaco-editor'), {
-        value: '',
+        value: '// Write pseudocode  or any algorithm',
         language: 'javascript',
         theme: 'vs-dark',
         automaticLayout: true,
@@ -43,6 +43,10 @@ let aiPrompt = `Please provide an explanation in the following format:
   "improvement": "Suggestions for code improvement (if any)"
 }`;
 
+
+
+let aiAnimation = document.getElementById("animContainer")
+
 let analyzeButton = document.getElementById('options');
 analyzeButton.onclick = async () => {
     const code = window.monacoEditor.getValue();
@@ -51,6 +55,8 @@ analyzeButton.onclick = async () => {
         return;
     }
 
+
+    aiAnimation.style.display="flex"
     // Use a secure backend endpoint for API_KEY retrieval
     const API_KEY = 'AIzaSyDbnLUU80hULpv1LYhtyVD_DEkS23SQoP4';
     const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=${API_KEY}`;
@@ -70,12 +76,15 @@ analyzeButton.onclick = async () => {
         });
 
         if (!response.ok) {
+            analyzeButton.innerText="re - alalyze"
             throw new Error(`Error: ${response.status}`);
         }
 
         const data = await response.json();
         console.log(data);
         renderExplanation(data);
+        aiAnimation.style.display="none"
+
     } catch (error) {
         console.error('Error calling Gemini API:', error);
     }
