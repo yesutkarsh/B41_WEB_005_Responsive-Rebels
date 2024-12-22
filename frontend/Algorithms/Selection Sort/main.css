@@ -1,0 +1,107 @@
+body {
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+    color: #212529;
+  }
+
+
+h1{
+    color: #333;
+}
+#container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(2px,1fr));
+    gap: 1rem;
+    align-items: end;
+    justify-content: center;
+    height: 450px;
+    margin: 20px auto;
+    width: 80%;
+    position: relative;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    overflow: visible;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+.bar{
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 2px 2px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: height 0.3s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.bar-label {
+    position: absolute;
+    top: -25px;
+    color: black;
+    width: 100%;
+    text-align: center;
+    overflow: visible;
+    white-space: nowrap;
+}
+
+.selectionSort{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.algorithm{
+    background-color: whitesmoke;
+    width: 90%;
+    border-radius: 12px;
+}
+
+.algorithm .options{
+    color: black;
+    background-color: rgb(240, 240, 240);
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.13);
+    border-radius: 12px;
+}
+
+.algorithm button{
+    cursor: pointer;
+    background-color: black;
+    border: none;
+    padding: 10px;
+    border-radius: 12px;
+    color: rgb(228, 228, 228);
+}
+
+#userArr{
+    border-radius: 12px;
+    padding: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.205);
+}
+
+.warning-message {
+    color: #dc3545;
+    font-size: 14px;
+    margin-top: 10px;
+    display: none;
+}
+
+
+
+
+
+
+

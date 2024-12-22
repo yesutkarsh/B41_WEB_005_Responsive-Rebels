@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Algorithms</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <!-- Header Section -->
+ 
+    <div class="search-container">
+        <div class="search-wrapper">
+            <button class="search-button" id="searchBtn">
+                <i class="ri-search-line"></i>
+                <span>Search algorithms</span>
+                <div class="shortcut-hint">⌘ ctrl + K</div>
+            </button>
+        </div>
+    </div>
+
+    <!-- Search Modal -->
+    <div class="search-modal" id="searchModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="search-input-wrapper">
+                    <i class="ri-search-line"></i>
+                    <input type="text" id="searchInput" placeholder="Type to search algorithms...">
+                </div>
+                <button class="close-modal" id="closeModal">
+                    <i class="ri-close-line"></i>
+                </button>
+            </div>
+            <div class="search-results" id="searchResults">
+                <!-- Search results will be dynamically populated here -->
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        const searchBtn = document.getElementById('searchBtn');
+        const searchModal = document.getElementById('searchModal');
+        const closeModal = document.getElementById('closeModal');
+        const searchInput = document.getElementById('searchInput');
+        const searchResults = document.getElementById('searchResults');
+
+        // Algorithm data with titles and links
+        const algorithmsData = [
+            { title: 'Queue', link: '../Algorithms/Queue/index.html' },
+            { title: 'Bubble Sort', link: '../Algorithms/Bubble Sort/main.html' },
+            { title: 'Selection Sort', link: '../Algorithms/Selection Sort/main.html' },
+            { title: 'Merge Sort', link: '../Algorithms/Merge Sort/main.html' },
+            { title: 'Quick Sort', link: '../Algorithms/Quick Sort/main.html' },
+            { title: 'Binary Search', link: '../Algorithms/Binary Search/main.html' },
+            { title: 'Linear Search', link: '../Algorithms/Linear Search/main.html' },
+            { title: 'Linked List', link: '../Algorithms/Linked List/main.html' },
+            { title: 'Two Pointer', link: '../Algorithms/Two Pointer/main.html' }
+        ];
+
+        // Open modal
+        searchBtn.addEventListener('click', () => {
+            searchModal.style.display = 'block';
+            searchInput.focus();
+        });
+
+        // Close modal
+        closeModal.addEventListener('click', () => {
+            searchModal.style.display = 'none';
+        });
+
+        // Close on outside click
+        window.addEventListener('click', (e) => {
+            if (e.target === searchModal) {
+                searchModal.style.display = 'none';
+            }
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+                e.preventDefault();
+                searchModal.style.display = 'block';
+                searchInput.focus();
+            }
+            if (e.key === 'Escape') {
+                searchModal.style.display = 'none';
+            }
+        });
+
+        // Search functionality
+        searchInput.addEventListener('input', (e) => {
+            const searchTerm = e.target.value.toLowerCase();
+            
+            const filteredResults = algorithmsData.filter(algo => 
+                algo.title.toLowerCase().includes(searchTerm)
+            );
+
+            searchResults.innerHTML = filteredResults
+                .map(algo => `
+                    <div class="search-result-item">
+                        <a href="${algo.link}">
+                            <div style="font-weight: 500;">${algo.title}</div>
+                        </a>
+                    </div>
+                `)
+                .join('');
+        });
+
+        // Show all algorithms initially
+        searchInput.dispatchEvent(new Event('input'));
+    </script>
+
+    <!-- Algorithm List Section -->
+    <div class="algorithm-list">
+        <!-- Stack -->
+        <div class="algorithm-card">
+            <div class="algorithm-icon">📚</div>
+            <h3>Stack</h3>
+            <p>Last-In-First-Out (LIFO) data structure for storing and managing data.</p>
+            <a href="../Algorithms/Stack/main.html">Learn More</a>
+        </div>
+
+        <!-- Queue -->
+        <div class="algorithm-card">
+            <div class="algorithm-icon">🌀</div>
+            <h3>Queue</h3>
+            <p>First-In-First-Out (FIFO) data structure for sequential processing.</p>
+            <a href="../Algorithms/Queue/index.html">Learn More</a>
+        </div>
+
+        <!-- Bubble Sort -->
+        <div class="algorithm-card">
+            <div class="algorithm-icon">🔄</div>
+            <h3>Bubble Sort</h3>
+            <p>See how Bubble Sort organizes data step by step.</p>
+            <a href="../Algorithms/Bubble Sort/main.html">Learn More</a>
+        </div>
+
+        <!-- Selection Sort -->
+        <div class="algorithm-card">
+            <div class="algorithm-icon">📋</div>
+            <h3>Selection Sort</h3>
+            <p>Discover the selection process for sorting data efficiently.</p>
+            <a href="../Algorithms/Selection Sort/main.html">Learn More</a>
+        </div>
+
+        <!-- Merge Sort -->
+        <div class="algorithm-card">
+            <div class="algorithm-icon">🔗</div>
+            <h3>Merge Sort</h3>
+            <p>Visualize the divide-and-conquer method in action.</p>
+            <a href="../Algorithms/Merge Sort/main.html">Learn More</a>
+        </div>
+
+        <!-- Quick Sort -->
+        <div class="algorithm-card">
+            <div class="algorithm-icon">⚡</div>
+            <h3>Quick Sort</h3>
+            <p>Learn how Quick Sort quickly organizes data.</p>
+            <a href="#">Learn More</a>
+        </div>
+
+        <!-- Sliding Window -->
+        <div class="algorithm-card">
+            <div class="algorithm-icon">📏</div>
+            <h3>Sliding Window</h3>
+            <p>Explore the technique for solving range problems.</p>
+            <a href="#">Learn More</a>
+        </div>
+
+        <!-- Binary Search -->
+        <div class="algorithm-card">
+            <div class="algorithm-icon">🔍</div>
+            <h3>Binary Search</h3>
+            <p>See how binary search efficiently finds elements.</p>
+            <a href="../Algorithms/Binary Search/main.html">Learn More</a>
+        </div>
+
+        <!-- Linked List -->
+        <div class="algorithm-card">
+            <div class="algorithm-icon">🔗</div>
+            <h3>Linked List</h3>
+            <p>Understand how nodes link to form dynamic data structures.</p>
+            <a href="../Algorithms/Linked List/main.html">Learn More</a>
+        </div>
+
+        <!-- Two Pointers -->
+        <div class="algorithm-card">
+            <div class="algorithm-icon">➡️⬅️</div>
+            <h3>Two Pointers</h3>
+            <p>Learn how two-pointer technique solves array problems.</p>
+            <a href="../Algorithms/Two Pointer/main.html">Learn More</a>
+        </div>
+    </div>
+
+</body>
+</html>

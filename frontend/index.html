@@ -1,11 +1,203 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>algovision</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+   <!-- Google Font  -->
+
+   <!-- Universal css -->
+    <link rel="stylesheet" href="./universal-css/navbar.css">
+    <link rel="stylesheet" href="./universal-css/slider.css">
+    <link rel="stylesheet" href="./universal-css/searchBar.css">
+
+
+
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <!-- Navagation Bar -->
+    <nav>
+      <div class="hamBurger" id="hamBurger">
+        <i class="ri-collage-fill"></i>
+      </div>
+   
+      <div class="profile" id="profile">
+        <!-- <i class="ri-user-smile-fill"></i> -->
+      </div>
+    </nav>
+
+
     
-</body>
+
+<!-- Side Panel -->
+
+<!-- code -->
+    <div class="sidePanel" id="SidePanel">
+        <nav>
+            <img src="./assets/smallLogo.png" alt="">
+            <i class="ri-arrow-go-back-line" id="closeSidePanel"></i>
+        </nav>
+        <div class="line"></div>
+
+        <!-- List Of Algorithms -->
+        <div class="menu-items" id="menu-items">
+          <a href="./Algorithms_Page/index.html">
+            <li>Explore</li>
+          </a>
+            <a href="./Algorithms/Bubble Sort/main.html">
+              <li>Bubble Sort</li>
+            </a>
+
+            <a href="./Algorithms/Merge Sort/main.html">
+              <li id="merge">Merge Sort</li>
+            </a>
+            <a href="./Algorithms/Linked List/main.html">
+              <li id="linked">Linked List</li>
+            </a>
+
+            <a href="./Algorithms/Selection Sort/main.html"><li>Selection Sort</li></a>
+
+            <a href="./Algorithms/Queue/index.html"><li>Queue</li></a>
+
+            <a href="./Algorithms/Two Pointer/main.html"><li>Two pointer</li></a>
+            
+            <a href="./Algorithms/Binary Search/main.html"><li>Binary Search</li></a>
+         
+            
+
+        </div>
+    </div>
+
+    
+
+
+    <!-- Hero Section -->
+    <div class="hero" id="hero">
+        <div class="logo" id="logo">
+            <img src="./assets/logo.png" alt="">
+        </div>
+
+
+        <div class="search-container">
+            <div class="search-wrapper">
+                <button class="search-button" id="searchBtn">
+                    <i class="ri-search-line"></i>
+                    <span>Search algorithms</span>
+                    <div class="shortcut-hint">⌘ ctrl + K</div>
+                </button>
+            </div>
+        </div>
+
+        <!-- Search Modal -->
+        <div class="search-modal" id="searchModal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="search-input-wrapper">
+                        <i class="ri-search-line"></i>
+                        <input type="text" id="searchInput" placeholder="Type to search algorithms...">
+                    </div>
+                    <button class="close-modal" id="closeModal">
+                        <i class="ri-close-line"></i>
+                    </button>
+                </div>
+                <div class="search-results" id="searchResults">
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- explore or ai code editro -->
+        <div class="glow-links">
+            <a href="./Algorithms_Page/index.html" class="glow-link">
+                <i class="ri-compass-3-line"></i>
+                <span>Explore</span>
+            </a>
+            
+            <a href="./Algorithms/CodeEditor/index.html" class="glow-link">
+                <i class="ri-code-box-line"></i>
+                <span>OpenAI Code Editor</span>
+            </a>
+        </div>
+
+
+
+        <div class="algorithm-cards-container">
+            <div class="algorithm-cards">
+                <div class="card">
+                    <div class="card-icon">
+                        <i class="ri-stack-line"></i>
+                    </div>
+                    <h3>Merge Sort</h3>
+                    <p>Divide and Concurer, recursively divide the input array into smaller subarrays</p>
+                    <a href="./Algorithms/Merge Sort/main.html" class="card-link">
+                        Learn More <i class="ri-arrow-right-line"></i>
+                    </a>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">
+                        <i class="ri-queue-line"></i>
+                    </div>
+                    <h3>Queue</h3>
+                    <p>First-In-First-Out (FIFO) data structure for sequential processing.</p>
+                    <a href="./Algorithms/Queue/index.html" class="card-link">
+                        Learn More <i class="ri-arrow-right-line"></i>
+                    </a>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">
+                        <i class="ri-git-merge-line"></i>
+                    </div>
+                    <h3>Two Pointer</h3>
+                    <p>Technique using two pointers to solve array-based problems efficiently.</p>
+                    <a href="./Algorithms/Two Pointer/main.html" class="card-link">
+                        Learn More <i class="ri-arrow-right-line"></i>
+                    </a>
+                </div>
+            </div>
+
+            <button class="more-btn" id="moreAlgorithms">
+                <span>More Algorithms</span>
+                <i class="ri-arrow-down-line"></i>
+            </button>
+
+  
+
+            <script>
+                document.getElementById('moreAlgorithms').addEventListener('click', function() {
+                    const searchBtn = document.getElementById('searchBtn');
+                    if (searchBtn) {
+                        searchBtn.click();
+                    }
+                });
+            </script>
+        </div>
+
+
+
+
+          
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/motion@11.11.13/dist/motion.js"></script>
+
+    <!-- universal scripts -->
+     <script type="module" src="./universal-js/searchBar.mjs"></script>
+    <script src="./universal-js/slider.js"></script>r
+  </body>
 </html>
+

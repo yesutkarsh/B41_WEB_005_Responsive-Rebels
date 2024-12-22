@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="../../universal-css/about.css">
+    <link rel="stylesheet" href="../../universal-css/slider.css">
+    <link rel="stylesheet" href="../../universal-css/navbar.css">
+    <link rel="stylesheet" href="../../universal-css/animationVisualize.css">
+
+
+      <!-- Google Font -->
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet"
+      />
+      <!-- Google Font  -->
+
+</head>
+<body>
+
+
+
+    
+    <nav>
+        <div class="hamBurger" id="hamBurger">
+          <i class="ri-collage-fill"></i>
+        </div>
+  
+        <div class="logo" id="logo">
+          <a href="/">
+            <img src="../../assets/fullBlack.png" alt="" />
+          </a>
+        </div>
+        
+        <div class="profile" id="profile">
+          <!-- <i class="ri-user-smile-fill"></i> -->
+        </div>
+      </nav>
+      
+   
+
+    <!-- slider -->
+    <div class="sidePanel" id="SidePanel">
+      <nav>
+        <img src="../../assets/fullBlack.png" alt="" />
+        <i class="ri-arrow-go-back-line" id="closeSidePanel"></i>
+      </nav>
+      <div class="line"></div>
+
+      <!-- List Of Algorithms -->
+      <div class="menu-items" id="menu-items">
+        <a href="../../Algorithms_Page/index.html">
+          <li>Explore</li>
+        </a>
+        <a href="../Bubble Sort/main.html">
+          <li >Bubble Sort</li>
+        </a>
+
+        <a href="../Merge Sort/main.html">
+          <li id="merge">Merge Sort</li>
+        </a>
+        <a href="../Linked List/main.html">
+          <li id="linked">Linked List</li>
+        </a>
+
+        <a href="../Selection Sort/main.html"><li>Selection Sort</li></a>
+
+        <a href="../Queue/index.html"><li  class="menu-items-active">Queue</li></a>
+
+        <a href="../Two Pointer/main.html"><li>Two pointer</li></a>
+
+        <a href="../Binary Search/main.html"><li>Binary Search</li></a>
+      </div>
+    </div>
+<center>
+    <h1>Queue</h1>
+</center>
+    <div class="container">
+        <div class="queue-container" id="queue-display"></div>
+<br>        
+<div id="input-container">
+    <input type="text" id="element-input" placeholder="Enter value">
+</div>
+        <div class="controls">
+            <button class="btn" onclick="enqueue()">Enqueue</button>
+            <button class="btn" onclick="dequeue()">Dequeue</button>
+            <button class="btn" onclick="checkEmpty()">Is Empty</button>
+            <button class="btn" onclick="getFront()">Get Front</button>
+            <button class="btn" onclick="getRear()">Get Rear</button>
+            <button class="btn" onclick="clearQueue()">Clear Queue</button>
+        </div>
+        
+        <div class="message" id="message"></div>
+
+        
+    </div>
+
+<center>
+
+
+            <!-- about -->
+      <div class="about" id="about">
+        <p>
+          A Queue is a fundamental data structure that follows the First-In-First-Out (FIFO) principle. 
+          It's similar to a real-world queue or line, where the first person to enter is the first to 
+          leave. Elements are added at the rear (enqueue) and removed from the front (dequeue) of the queue.
+        </p>
+        <ol>
+          <li>
+            <strong>Basic Operations:</strong>
+            <ul>
+              <li>Enqueue: Add element to rear</li>
+              <li>Dequeue: Remove element from front</li>
+              <li>Front/Peek: View first element</li>
+              <li>IsEmpty: Check if queue is empty</li>
+            </ul>
+          </li>
+          <li>
+            <strong>Common Applications:</strong>
+            <ul>
+              <li>Task scheduling in operating systems</li>
+              <li>Print job management</li>
+              <li>Breadth-first search in graphs</li>
+              <li>Request handling in web servers</li>
+              <li>Buffer for data streams</li>
+            </ul>
+          </li>
+          <li>
+            <strong>Key Advantages:</strong>
+            <ul>
+              <li>Simple and intuitive implementation</li>
+              <li>Predictable element ordering</li>
+              <li>Efficient for FIFO operations</li>
+            </ul>
+          </li>
+        </ol>
+      </div>
+
+      <div class="about" id="about">
+        <h2>Complexity Analysis of Queue Operations</h2>
+        <p>Queue operations have consistent time complexities:</p>
+        <ul>
+          <li><strong>Time Complexity:</strong>
+            <ul>
+              <li>Enqueue (add): O(1)</li>
+              <li>Dequeue (remove): O(1)</li>
+              <li>Front/Peek: O(1)</li>
+              <li>IsEmpty: O(1)</li>
+              <li>Size: O(1)</li>
+            </ul>
+          </li>
+          <li><strong>Space Complexity:</strong> O(n)
+            <ul>
+              <li>Space grows linearly with number of elements</li>
+              <li>Additional variables for front and rear tracking</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+
+      <div class="about">
+        <h3>Types of Queues:</h3>
+        <ul>
+          <li>Simple Queue (Linear Queue)</li>
+          <li>Circular Queue</li>
+          <li>Priority Queue</li>
+          <li>Double-ended Queue (Deque)</li>
+          <li>Bounded Queue</li>
+        </ul>
+        <h3>Implementation Tips:</h3>
+        <ul>
+          <li>Consider using circular implementation to avoid waste of space</li>
+          <li>Handle queue overflow and underflow conditions</li>
+          <li>Choose appropriate size for bounded queues</li>
+          <li>Consider thread safety for concurrent applications</li>
+          <li>Monitor performance in high-throughput scenarios</li>
+        </ul>
+      </div>
+    </div>
+      <!-- about -->
+</center>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/motion@11.11.13/dist/motion.js"></script>
+    <script src="../../universal-js/slider.js"></script>
+    <script src="index.js"></script>
+    
+</body>
+</html>
