@@ -47,11 +47,16 @@ function displayArr(arr) {
         let bar = document.createElement("div");
         bar.classList.add("bar");
         
-        // Remove Math.max and use BASE_HEIGHT as addition instead
+        // Create a separate span for the number
+        let numberLabel = document.createElement("span");
+        numberLabel.classList.add("bar-label");
+        numberLabel.textContent = value;
+        
         const scaledHeight = (value * SCALE_FACTOR * scaleFactor) + BASE_HEIGHT;
         bar.style.height = `${scaledHeight}px`;
         
-        bar.textContent = value;
+        // Add the number label to the bar
+        bar.appendChild(numberLabel);
         container.appendChild(bar);
     });
 
@@ -124,9 +129,9 @@ async function bubbleSort(arr) {
                     const height2 = (arr[j + 1] * SCALE_FACTOR * scaleFactor) + BASE_HEIGHT;
                     
                     bar1.style.height = `${height1}px`;
-                    bar1.textContent = arr[j];
+                    bar1.querySelector('.bar-label').textContent = arr[j];
                     bar2.style.height = `${height2}px`;
-                    bar2.textContent = arr[j + 1];
+                    bar2.querySelector('.bar-label').textContent = arr[j + 1];
                 }
 
                 bar1.style.backgroundColor = "#3498db";

@@ -38,7 +38,14 @@ h1{
     align-items: center;
     justify-content: center;
     transition: height 0.3s ease;
-}               
+    position: relative;
+}
+
+.bar-label {
+    position: absolute;
+    top: -25px;
+    color: black;
+}
 
 .selectionSort{
     width: 100%;

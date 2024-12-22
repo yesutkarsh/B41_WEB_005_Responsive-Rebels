@@ -34,11 +34,6 @@ function generateArr() {
 }
 
 function displayArr(arr) {
-    if (!container) {
-        console.error("Container element not found!");
-        return;
-    }
-
     container.innerHTML = "";
     
     const maxValue = Math.max(...arr);
@@ -49,22 +44,18 @@ function displayArr(arr) {
         let bar = document.createElement("div");
         bar.classList.add("bar");
         
+        // Create a separate span for the number
+        let numberLabel = document.createElement("span");
+        numberLabel.classList.add("bar-label");
+        numberLabel.textContent = value;
+        
         const scaledHeight = (value * SCALE_FACTOR * scaleFactor) + BASE_HEIGHT;
         bar.style.height = `${scaledHeight}px`;
         
-        bar.textContent = value;
+        // Add the number label to the bar
+        bar.appendChild(numberLabel);
         container.appendChild(bar);
     });
-
-    const warningElement = document.getElementById("warning-message");
-    if (warningElement) {
-        if (maxValue > MAX_INPUT_VALUE) {
-            warningElement.style.display = "block";
-            warningElement.textContent = "Note: Values have been scaled to fit the display";
-        } else {
-            warningElement.style.display = "none";
-        }
-    }
 }
 
 function userInputFun(input) {
@@ -159,9 +150,9 @@ async function selectionSort(arr) {
                 const height2 = (arr[min_idx] * SCALE_FACTOR * scaleFactor) + BASE_HEIGHT;
                 
                 bars[i].style.height = `${height1}px`;
-                bars[i].textContent = arr[i];
+                bars[i].querySelector('.bar-label').textContent = arr[i];
                 bars[min_idx].style.height = `${height2}px`;
-                bars[min_idx].textContent = arr[min_idx];
+                bars[min_idx].querySelector('.bar-label').textContent = arr[min_idx];
             }
             
             // Mark current position as sorted
