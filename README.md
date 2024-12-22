@@ -4,7 +4,7 @@
 The Algorithm Visualizer is an interactive web application built using HTML, CSS, and JavaScript. Its primary purpose is to help users understand the working of various sorting algorithms through dynamic visualizations. The application represents data as bars of different heights, which are manipulated and animated to simulate the sorting process in real-time. By offering a hands-on approach to learning algorithms, this project serves as an educational tool for students, developers, and anyone interested in computer science fundamentals.
 
 ## Project Type
-Frontend | Backend | Fullstack
+Frontend
 
 ## Deplolyed App
 ### Netlify Link
@@ -30,7 +30,7 @@ my-app/
    
 
 ## Video Walkthrough of the project
-
+https://www.youtube.com/watch?v=ry_I9FfoQIU
 
 ## Video Walkthrough of the codebase
 https://youtu.be/VVx-pcbOq38
