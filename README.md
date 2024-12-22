@@ -7,19 +7,33 @@ The Algorithm Visualizer is an interactive web application built using HTML, CSS
 Frontend | Backend | Fullstack
 
 ## Deplolyed App
+### Netlify Link
+https://algovisiondev.netlify.app/
+### Vercel Link
+https://algovisiondev.vercel.app/
 
 
 ## Directory Structure
 my-app/
-├─ backend/
 ├─ frontend/
-│  ├─ ...
+│  ├─Algorithms
+   ├─Algorithms_Page
+   ├─assets
+   ├─Description
+   ├─universal-css
+   ├─universal-js
+
+#### Algorithm containes all the algorithm we implemented
+#### Algorithm_Pages is Explore pages
+#### Algorithm_Pages is Explore Page
+
+   
 
 ## Video Walkthrough of the project
-Attach a very short video walkthough of all of the features [ 1 - 3 minutes ]
+
 
 ## Video Walkthrough of the codebase
-Attach a very short video walkthough of codebase [ 1 - 5 minutes ]
+https://youtu.be/VVx-pcbOq38
 
 ## Features
 List out the key features of your application.
@@ -32,20 +46,19 @@ List out the key features of your application.
 List your design desissions & assumptions
 
 ## Installation & Getting started
-Detailed instructions on how to install, configure, and get the project running. For BE/FS projects, guide the reviewer how to check mongodb schema etc.
-
 ```bash
-npm install my-project
-cd my-project
-npm start
+git clone repo link
+npm i  ( node js must be installed)
 ```
+open with live server or open index file in root directory
 
 ## Usage
-Provide instructions and examples on how to use your project.
+After Cloning Repo
+1. Npm init
+2. Open With Live Server or open index.html file form root
+3. Inside Frontend Folder we have algorithm folder which contains all the algorithm we have implemented so far.
 
-```bash
-# Example
-```
+
 
 Include screenshots as necessary.
 
@@ -53,18 +66,14 @@ Include screenshots as necessary.
 Provide user credentials for autheticated pages
 
 ## APIs Used
-If your application relies on external APIs, document them and include any necessary links or references.
+For test purpose only i have provide my own api key but you must proceed with your own api key in .env file
 
-## API Endpoints
-In case of Backend Applications provide a list of your API endpoints, methods, brief descriptions, and examples of request/response.
-GET /api/items - retrieve all items
-POST /api/items - create a new item
+
 
 
 ## Technology Stack
-List and provide a brief overview of the technologies used in the project.
-
-- Node.js
-- Express.js
-- MongoDB
-- Other libraries/modules
+- Html
+- Css
+- Javascript
+- Reminxicon as library for icon
+- gemini sdk and api
