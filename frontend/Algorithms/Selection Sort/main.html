@@ -105,15 +105,17 @@
         </span>
 
         <div id="container"></div>
+        <div id="warning-message" class="warning-message"></div>
         <div class="options">
           <label for="userArr">Enter Inputs (Comma-Separated)</label>
           <input type="text" id="userArr" placeholder="eg. 10,40,20,30,50" />
           <br /><br />
           <button id="generate">Generate Random Array</button>
-          <button style="margin-left: 2rem" id="stop">Stop Visualizer</button>
           <button id="sort" style="margin-left: 2rem">Start Visualizer</button>
           <label style="margin-left: 2rem" for="speedControl">Speed</label>
           <input type="range" id="speedControl" min="1" max="3" value="2" />
+          <button style="margin-left: 2rem" id="stop">Stop Visualizer</button>
+          <button id="clear" style="margin-left: 2rem">Clear</button>
         </div>
       </div>
 
@@ -156,6 +158,16 @@
             = O(n)
           </li>
           <li>Therefore overall complexity = O(n) * O(n) = O(n*n) = O(n2)</li>
+        </ul>
+      </div>
+
+      <div class="about">
+        <h3>Usage Tips:</h3>
+        <ul>
+          <li>Enter positive numbers separated by commas (e.g., 5, 10, 15)</li>
+          <li>Maximum recommended input: 125</li>
+          <li>Maximum array size: 50 numbers</li>
+          <li>Larger numbers will be automatically scaled to fit the display</li>
         </ul>
       </div>
     </div>
