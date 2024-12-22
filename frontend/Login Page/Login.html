@@ -2,65 +2,185 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Login Page</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
     <style>
-        body{
-            background-color: black;
+        body {
+            background: linear-gradient(135deg, #0a0a0a, #1a1a1a);
             display: flex;
             justify-content: center;
             font-family: "Roboto", sans-serif;
+            min-height: 100vh;
+            margin: 0;
+            align-items: center;
         }
-        label{
-            color: white;
+
+        #Login_Box {
+            background-color: rgba(30, 30, 30, 0.9);
+            padding: 3rem;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            width: 28rem;
+            min-width: 300px;
+            border-radius: 20px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(10px);
         }
-        #Login_Box{
-            padding: 5rem;
-            border: 2px solid grey;
-            width: 20rem;
-            margin-top: 5rem;
-            border-radius: 5rem;
-            height: 20rem;
+
+        .form-title {
+            color: #ffffff;
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
         }
-        #email{
-            width: 90%;
-            margin-top: 1rem;
-            margin-bottom: 3rem;
+
+        .input-group {
+            position: relative;
+            width: 100%;
+            margin-bottom: 20px;
         }
-        #pass{
-            width: 90%;
-            margin-top: 1rem;
-            margin-bottom: 3rem;
+
+        label {
+            color: #e0e0e0;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+            display: block;
         }
-        button{
-            width: 90%;
-            padding: 0.5rem;
-            background-color: #007bff;
+
+        #email, #pass {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 15px;
+            margin: 8px 0;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 5px;
+            background-color: rgba(15, 15, 15, 0.8);
+            color: #ffffff;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+
+        #email:focus, #pass:focus {
+            outline: none;
+            background-color: rgba(20, 20, 20, 0.9);
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+            border: 1px solid rgba(0, 123, 255, 0.5);
+        }
+
+        button {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 15px;
+            background: linear-gradient(135deg, #004a99, #003366);
             border: none;
-            border-radius: 3px;
+            border-radius: 5px;
             color: white;
             cursor: pointer;
             font-size: 16px;
             font-weight: 700;
-            transition: background-color 0.3 ease;
+            transition: all 0.3s ease;
+            box-shadow: inset 0 1px rgba(255, 255, 255, 0.1);
+            margin-top: 10px;
         }
-        a{
-            color: blue;
+
+        button:hover {
+            background: linear-gradient(135deg, #005cb8, #004080);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        a {
+            color: #3b82f6;
             text-decoration: none;
+            display: block;
+            text-align: center;
+            margin-top: 20px;
         }
-        p:hover{
-            cursor: pointer;
+
+        a p {
+            color: #3b82f6;
+            margin: 0;
+            transition: color 0.3s ease;
+        }
+
+        a p:hover {
+            color: #60a5fa;
+        }
+
+        ::placeholder {
+            color: #666666;
+            opacity: 1;
+        }
+
+        * {
+            transition: all 0.2s ease;
+        }
+
+        @media screen and (max-width: 768px) {
+            #Login_Box {
+                width: 85%;
+                min-width: unset;
+                padding: 2rem;
+                margin: 1rem;
+            }
+
+            #email, #pass {
+                padding: 14px;
+                font-size: 16px;
+            }
+
+            button {
+                padding: 14px;
+                font-size: 16px;
+            }
+
+            .form-title {
+                font-size: 1.3rem;
+            }
+        }
+
+        @media screen and (max-width: 380px) {
+            #Login_Box {
+                width: 90%;
+                padding: 1.5rem;
+            }
+        }
+
+        * {
+            max-width: 100%;
+            box-sizing: border-box;
+        }
+
+        input, button, a {
+            touch-action: manipulation;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        @media screen and (max-width: 768px) and (-webkit-min-device-pixel-ratio: 0) { 
+            select,
+            textarea,
+            input {
+                font-size: 16px;
+            }
         }
     </style>
 </head>
 <body>
     <div id="Login_Box">
-        <label for="email" id="emailLabel">Enter Your Email :</label><br>
-        <input type="email" id="email"><br>
-        <label for="pass" id="passLabel">Enter Your Password :</label><br>
-        <input type="password" id="pass"><br>
-        <button type="submit">Login</button><br>
+        <div class="form-title">Welcome Back</div>
+        <div class="input-group">
+            <label for="email" id="emailLabel">Enter Your Email</label>
+            <input type="email" id="email" placeholder="example@email.com">
+        </div>
+        
+        <div class="input-group">
+            <label for="pass" id="passLabel">Enter Your Password</label>
+            <input type="password" id="pass" placeholder="••••••••">
+        </div>
+        
+        <button type="submit">Login</button>
         <a href="signUp.html"><p>New User? SignUp Here</p></a>
     </div>
 </body>
