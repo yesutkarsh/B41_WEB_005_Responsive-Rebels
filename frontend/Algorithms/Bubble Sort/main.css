@@ -25,10 +25,14 @@ h1{
     background-color: #f8f9fa;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    overflow-y: hidden;
+    overflow: visible;
+    padding-top: 40px;
+    padding-bottom: 40px;
 }
 .bar{
-    background-color: #3498db;
+    background-color: #007bff;
+    position: relative;
+    z-index: 1;
     color: white;
     position: relative;
     display: flex;
@@ -89,8 +93,12 @@ h1{
 }
 .bar-label {
     position: absolute;
-    top: -25px; /* Adjust this value to position the number higher or lower */
+    top: -25px;
     color: black;
+    width: 100%;
+    text-align: center;
+    overflow: visible;
+    white-space: nowrap;
 }
 
 
