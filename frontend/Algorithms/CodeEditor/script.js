@@ -6,7 +6,7 @@ require.config({
 
 require(['vs/editor/editor.main'], function () {
     var editor = monaco.editor.create(document.getElementById('monaco-editor'), {
-        value: '// Write pseudocode  or any algorithm',
+        value: '',
         language: 'javascript',
         theme: 'vs-dark',
         automaticLayout: true,
