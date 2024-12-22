@@ -1,40 +1,146 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Roboto", sans-serif;
     text-align: center;
-    background-color: #f5f5f5;
+    background-color: #f8f9fa;
     margin: 0;
-    padding: 20px;
-}
-h1 {
+    padding: 0;
+    color: #212529;
+  }
+
+
+h1{
     color: #333;
 }
-#container {
+#container{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(2px, 1fr));
-    gap: 1rem;
+    grid-template-columns: repeat(auto-fit,minmax(30px,1fr));
+    gap: 0.5rem;
     align-items: end;
     justify-content: center;
-    height: 400px;
+    height: 450px;
     margin: 20px auto;
-    width: 60%;
-    background-color: #ddd;
-    border: 2px solid #ccc;
+    width: 80%;
     position: relative;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    overflow: hidden;
+    padding-top: 40px;
+    padding-bottom: 40px;
 }
-.bar {
-    background-color: #3498db;
+.bar{
+    background-color: #007bff;
+    position: relative;
+    z-index: 1;
     color: white;
-    text-align: center;
+    display: flex;
+    justify-content: center;
     font-size: 12px;
     font-weight: bold;
     border-radius: 2px 2px 0 0;
+    min-height: 30px;
+    align-items: center;
+    justify-content: center;
+    transition: height 0.3s ease;
+    max-height: 450px;
+    min-width: 25px;
+}               
+
+.bubbleSort{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.algorithm{
+    background-color: whitesmoke;
+    width: 90%;
+    border-radius: 12px;
+}
+
+.algorithm .options{
+    color: black;
+    background-color: rgb(240, 240, 240);
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.13);
+    border-radius: 12px;
+}
+
+.algorithm button{
+    cursor: pointer;
+    background-color: black;
+    border: none;
+    padding: 10px;
+    border-radius: 12px;
+    color: rgb(228, 228, 228);
+}
+
+#userArr{
+    border-radius: 12px;
+    padding: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.205);
+}
+
+.warning-message {
+    color: #dc3545;
+    font-size: 14px;
+    margin-top: 10px;
+    display: none;
+}
+.bar-label {
+    position: absolute;
+    top: -25px;
+    color: black;
+    width: 100%;
+    text-align: center;
+    overflow: visible;
+    white-space: nowrap;
+    z-index: 2;
+    font-size: 11px;
 }
 .bar.highlight {
-    background-color: #f1c40f;
+    background-color: #ffc107; /* Yellow for current elements being compared */
+    transition: background-color 0.3s ease;
 }
-.bar.found {
-    background-color: #27ae60;
+
+.bar.done {
+    background-color: #28a745; /* Done color */
 }
+
 .bar.checked {
-    background-color: #e74c3c;
+    background-color: #dc3545; /* Red for checked/eliminated elements */
+    opacity: 0.5;
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+}
+
+.bar.found {
+    background-color: #28a745; /* Green for found element */
+    transition: background-color 0.3s ease;
+}
+
+.algorithm button:hover {
+    background-color: #333;
+    transform: scale(1.05);
+    transition: all 0.2s ease;
+}
+
+#userArr:focus {
+    outline: 2px solid #007bff;
+    border-color: #007bff;
+}
+
+/* Improve input field styles */
+#target {
+    border-radius: 12px;
+    padding: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.205);
+}
+
+/* Improve speed control appearance */
+#speedControl {
+    cursor: pointer;
 }
