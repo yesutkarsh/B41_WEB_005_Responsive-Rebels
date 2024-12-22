@@ -10,6 +10,7 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "@kinde-oss/kinde-auth-pkce-js": "^4.2.2"
+    "@kinde-oss/kinde-auth-pkce-js": "^4.2.2",
+    "dotenv": "^16.4.7"
   }
 }
