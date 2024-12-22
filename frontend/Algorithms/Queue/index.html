@@ -110,30 +110,86 @@
 <center>
 
 
-         <!-- about -->
-         <div class="about" id="about">
-            <p>
-              Selection Sort is a comparison-based sorting algorithm. It sorts an
-              array by repeatedly selecting the smallest (or largest) element from
-              the unsorted portion and swapping it with the first unsorted element.
-              This process continues until the entire array is sorted.
-            </p>
-            <ol>
-              <li>
-                First we find the smallest element and swap it with the first
-                element. This way we get the smallest element at its correct
-                position.
-              </li>
-              <li>
-                Then we find the smallest among remaining elements (or second
-                smallest) and swap it with the second element.
-              </li>
-              <li>
-                We keep doing this until we get all elements moved to correct
-                position.
-              </li>
-            </ol>
-          </div>
+            <!-- about -->
+      <div class="about" id="about">
+        <p>
+          A Queue is a fundamental data structure that follows the First-In-First-Out (FIFO) principle. 
+          It's similar to a real-world queue or line, where the first person to enter is the first to 
+          leave. Elements are added at the rear (enqueue) and removed from the front (dequeue) of the queue.
+        </p>
+        <ol>
+          <li>
+            <strong>Basic Operations:</strong>
+            <ul>
+              <li>Enqueue: Add element to rear</li>
+              <li>Dequeue: Remove element from front</li>
+              <li>Front/Peek: View first element</li>
+              <li>IsEmpty: Check if queue is empty</li>
+            </ul>
+          </li>
+          <li>
+            <strong>Common Applications:</strong>
+            <ul>
+              <li>Task scheduling in operating systems</li>
+              <li>Print job management</li>
+              <li>Breadth-first search in graphs</li>
+              <li>Request handling in web servers</li>
+              <li>Buffer for data streams</li>
+            </ul>
+          </li>
+          <li>
+            <strong>Key Advantages:</strong>
+            <ul>
+              <li>Simple and intuitive implementation</li>
+              <li>Predictable element ordering</li>
+              <li>Efficient for FIFO operations</li>
+            </ul>
+          </li>
+        </ol>
+      </div>
+
+      <div class="about" id="about">
+        <h2>Complexity Analysis of Queue Operations</h2>
+        <p>Queue operations have consistent time complexities:</p>
+        <ul>
+          <li><strong>Time Complexity:</strong>
+            <ul>
+              <li>Enqueue (add): O(1)</li>
+              <li>Dequeue (remove): O(1)</li>
+              <li>Front/Peek: O(1)</li>
+              <li>IsEmpty: O(1)</li>
+              <li>Size: O(1)</li>
+            </ul>
+          </li>
+          <li><strong>Space Complexity:</strong> O(n)
+            <ul>
+              <li>Space grows linearly with number of elements</li>
+              <li>Additional variables for front and rear tracking</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+
+      <div class="about">
+        <h3>Types of Queues:</h3>
+        <ul>
+          <li>Simple Queue (Linear Queue)</li>
+          <li>Circular Queue</li>
+          <li>Priority Queue</li>
+          <li>Double-ended Queue (Deque)</li>
+          <li>Bounded Queue</li>
+        </ul>
+        <h3>Implementation Tips:</h3>
+        <ul>
+          <li>Consider using circular implementation to avoid waste of space</li>
+          <li>Handle queue overflow and underflow conditions</li>
+          <li>Choose appropriate size for bounded queues</li>
+          <li>Consider thread safety for concurrent applications</li>
+          <li>Monitor performance in high-throughput scenarios</li>
+        </ul>
+      </div>
+    </div>
+      <!-- about -->
 </center>
     
 

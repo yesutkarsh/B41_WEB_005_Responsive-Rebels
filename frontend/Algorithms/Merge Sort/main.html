@@ -156,24 +156,83 @@
         </div>
       </div>
 
-      <div class="about" id="about">
-        <p>
-          Merge sort is a sorting algorithm that follows the divide-and-conquer approach. It works by recursively dividing the input array into smaller subarrays and sorting those subarrays then merging them back together to obtain the sorted array.
-
-          In simple terms, we can say that the process of merge sort is to divide the array into two halves, sort each half, and then merge the sorted halves back together. This process is repeated until the entire array is sorted.
-        </p>
+         <!-- about -->
+         <div class="about" id="about">
+          <p>
+            Merge Sort is a highly efficient, stable sorting algorithm that uses a divide-and-conquer strategy 
+            to sort an array or list. It works by repeatedly dividing the array into smaller subarrays until 
+            each subarray contains a single element, then merging these subarrays back together in sorted order.
+          </p>
+          <ol>
+            <li>
+              <strong>Basic Concept:</strong>
+              <ul>
+                <li>Divide the array into two halves recursively</li>
+                <li>Sort each half independently</li>
+                <li>Merge the sorted halves back together</li>
+              </ul>
+            </li>
+            <li>
+              <strong>Key Features:</strong>
+              <ul>
+                <li>Stable sorting algorithm</li>
+                <li>Predictable performance</li>
+                <li>Works well for linked lists</li>
+                <li>Parallelizable</li>
+                <li>External sorting</li>
+              </ul>
+            </li>
+            <li>
+              <strong>Key Advantages:</strong>
+              <ul>
+                <li>Guaranteed O(n log n) time complexity</li>
+                <li>Stable sorting (maintains relative order of equal elements)</li>
+                <li>Efficient for large datasets</li>
+              </ul>
+            </li>
+          </ol>
+        </div>
   
-        <p>
-          How does Merge Sort work?
-          Merge sort is a popular sorting algorithm known for its efficiency and stability. It follows the divide-and-conquer approach to sort a given array of elements.
-          
-          Here’s a step-by-step explanation of how merge sort works:
-          
-          Divide: Divide the list or array recursively into two halves until it can no more be divided.
-          Conquer: Each subarray is sorted individually using the merge sort algorithm.
-          Merge: The sorted subarrays are merged back together in sorted order. The process continues until all elements from both subarrays have been merged.
-        </p>
+        <div class="about" id="about">
+          <h2>Complexity Analysis of Merge Sort</h2>
+          <p>Merge Sort provides consistent performance across all cases:</p>
+          <ul>
+            <li><strong>Time Complexity:</strong> O(n log n) for all cases
+              <ul>
+                <li>Best Case: O(n log n)</li>
+                <li>Average Case: O(n log n)</li>
+                <li>Worst Case: O(n log n)</li>
+              </ul>
+            </li>
+            <li><strong>Space Complexity:</strong> O(n)
+              <ul>
+                <li>Requires additional space proportional to input size</li>
+                <li>Not in-place sorting algorithm</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+  
+        <div class="about">
+          <h3>When to Use Merge Sort:</h3>
+          <ul>
+            <li>When stable sorting is required</li>
+            <li>When dealing with linked lists</li>
+            <li>When predictable performance is needed</li>
+            <li>When external sorting is required</li>
+            <li>When parallel processing can be utilized</li>
+          </ul>
+          <h3>Implementation Tips:</h3>
+          <ul>
+            <li>Ensure sufficient memory is available</li>
+            <li>Consider using insertion sort for small subarrays</li>
+            <li>Can be optimized for specific data types</li>
+            <li>Useful for sorting linked lists with O(1) extra space</li>
+            <li>Maximum recommended array size: Any (scales well with size)</li>
+          </ul>
+        </div>
       </div>
+        <!-- about -->
 
 
     </div>

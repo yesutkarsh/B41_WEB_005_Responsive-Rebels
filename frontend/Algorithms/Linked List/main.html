@@ -115,29 +115,87 @@
         </div>
       </div>
 
-      <div class="about" id="about">
-        <p>
-          In computer science, a linked list is a linear collection of data
-          elements whose order is not given by their physical placement in
-          memory. Instead, each element points to the next. It is a data
-          structure consisting of a collection of nodes which together represent
-          a sequence. In its most basic form, each node contains data, and a
-          reference (in other words, a link) to the next node in the sequence.
-        </p>
-
-        <p>
-          This structure allows for efficient insertion or removal of elements
-          from any position in the sequence during iteration. More complex
-          variants add additional links, allowing more efficient insertion or
-          removal of nodes at arbitrary positions. A drawback of linked lists is
-          that data access time is linear in respect to the number of nodes in
-          the list. Because nodes are serially linked, accessing any node
-          requires that the prior node be accessed beforehand (which introduces
-          difficulties in pipelining). Faster access, such as random access, is
-          not feasible. Arrays have better cache locality compared to linked
-          lists.
-        </p>
+         <!-- about -->
+         <div class="about" id="about">
+          <p>
+            A Linked List is a fundamental data structure that consists of a sequence of elements, 
+            where each element points to the next element in the sequence. Unlike arrays, linked 
+            lists don't store elements in contiguous memory locations, making them dynamic and 
+            flexible for insertions and deletions.
+          </p>
+          <ol>
+            <li>
+              <strong>Basic Concepts:</strong>
+              <ul>
+                <li>Nodes contain data and reference to next node</li>
+                <li>First node is called the head</li>
+                <li>Last node points to null</li>
+                <li>Dynamic size allocation</li>
+              </ul>
+            </li>
+            <li>
+              <strong>Common Operations:</strong>
+              <ul>
+                <li>Insertion at beginning, end, or middle</li>
+                <li>Deletion of nodes</li>
+                <li>Traversal through the list</li>
+                <li>Searching for elements</li>
+                <li>Updating node values</li>
+              </ul>
+            </li>
+            <li>
+              <strong>Key Advantages:</strong>
+              <ul>
+                <li>Dynamic size (grows/shrinks as needed)</li>
+                <li>Efficient insertions and deletions</li>
+                <li>No memory wastage</li>
+              </ul>
+            </li>
+          </ol>
+        </div>
+  
+        <div class="about" id="about">
+          <h2>Complexity Analysis of Linked List Operations</h2>
+          <p>Different operations in a linked list have varying time complexities:</p>
+          <ul>
+            <li><strong>Time Complexity:</strong>
+              <ul>
+                <li>Access: O(n) - must traverse from head</li>
+                <li>Insertion at beginning: O(1)</li>
+                <li>Insertion at end: O(n) or O(1) with tail pointer</li>
+                <li>Deletion: O(n) to find, O(1) to delete</li>
+                <li>Search: O(n) - linear search required</li>
+              </ul>
+            </li>
+            <li><strong>Space Complexity:</strong> O(n)
+              <ul>
+                <li>Each node requires extra space for next pointer</li>
+                <li>Space grows linearly with number of elements</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+  
+        <div class="about">
+          <h3>Types of Linked Lists:</h3>
+          <ul>
+            <li>Singly Linked List (next pointer only)</li>
+            <li>Doubly Linked List (previous and next pointers)</li>
+            <li>Circular Linked List (last node points to first)</li>
+            <li>Circular Doubly Linked List</li>
+            <li>Header Linked List</li>
+          </ul>
+          <h3>Common Applications:</h3>
+          <ul>
+            <li>Implementation of stacks and queues</li>
+            <li>Symbol table management in compilers</li>
+            <li>Undo functionality in software</li>
+            <li>Memory allocation in operating systems</li>
+            <li>Music playlist management</li>
+          </ul>
+        </div>
       </div>
+        <!-- about -->
 
 
     </div>
