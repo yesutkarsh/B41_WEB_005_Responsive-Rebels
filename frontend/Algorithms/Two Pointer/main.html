@@ -1,23 +1,216 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Two Pointers</title>
-    <link rel="stylesheet" href="main.css">
-</head>
-<body>
-    <h1>Two Pointers Visualizer</h1>
-    <button id="generate">Generate Random Array</button>
-    <button style="margin-left: 2rem;" id="stop">Stop Visualizer</button>
-    <br><br>
-    <label for="userArr">Enter Inputs (Comma-Separated)</label>
-    <input type="text" id="userArr" placeholder="eg. 10,20,30,40,50"> 
-    <button id="sort" style="margin-left: 2rem;">Start Visualizer</button>
-    <label style="margin-left: 2rem;" for="speedControl">Speed</label>
-    <input type="range" id="speedControl" min="1" max="3" value="2">
-    <div id="container"></div>
-</body>
-<script src="main.js"></script>
-</html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Two Pointer</title>
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="../../universal-css/navbar.css" />
+    <link rel="stylesheet" href="../../universal-css/slider.css" />
+    <link rel="stylesheet" href="../../universal-css/about.css" />
+    <link rel="stylesheet" href="../../universal-css/animationVisualize.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
 
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Google Font  -->
+  </head>
+  <body>
+    <!-- Navagation Bar -->
+    <nav>
+      <div class="hamBurger" id="hamBurger">
+        <i class="ri-collage-fill"></i>
+      </div>
+
+      <div class="logo" id="logo">
+        <a href="/">
+          <img src="../../assets/fullBlack.png" alt="" />
+        </a>
+      </div>
+
+      <div class="profile" id="profile">
+        <i class="ri-user-smile-fill"></i>
+      </div>
+    </nav>
+
+    <!-- Side Panel -->
+    <div class="sidePanel" id="SidePanel">
+        <nav>
+            <img src="../../assets/smallLogo.png" alt="">
+            <i class="ri-arrow-go-back-line" id="closeSidePanel"></i>
+        </nav>
+        <div class="line"></div>
+
+        <!-- List Of Algorithms -->
+        <div class="menu-items" id="menu-items">
+          <a href="../../Algorithms_Page/index.html">
+            <li class="menu-items-active">Explore</li>
+          </a>
+            <a href="../../Algorithms/Bubble Sort/main.html">
+              <li>Bubble Sort</li>
+            </a>
+
+            <a href="../../Algorithms/Merge Sort/main.html">
+              <li id="merge">Merge Sort</li>
+            </a>
+            <a href="../../Algorithms/Linked List/main.html">
+              <li id="linked">Linked List</li>
+            </a>
+
+            <a href="../../Algorithms/Selection Sort/main.html"><li>Selection Sort</li></a>
+
+            <a href="../../Algorithms/Queue/main.html"><li>Queue</li></a>
+            
+            <a href="../../Algorithms/Binary Search/main.html"><li>Binary Search</li></a>
+         
+            
+
+        </div>
+    </div>
+
+    <center>
+      <h1>Two Pointer Visualizer</h1>
+    </center>
+    <div class="bubbleSort" id="bubbleSort">
+      <div class="algorithm">
+        <!-- Visualize animation -->
+        <span class="visualize">
+          <div id="triangle">
+            <svg
+              id="Layer_1"
+              data-name="Layer 1"
+              version="1.1"
+              viewBox="0 0 2000 2000"
+            >
+              <polygon
+                class="cls-1"
+                points="928 781 1021 951 784.5 1371.97 1618 1371.97 1530.32 1544 509 1539 928 781"
+              ></polygon>
+              <polygon
+                class="cls-3"
+                points="1618 1371.97 784.5 1371.97 874.93 1211 1346 1211 923.1 456 1110.06 456 1618 1371.97"
+              ></polygon>
+              <g id="Layer_2" data-name="Layer 2">
+                <polygon
+                  class="cls-2"
+                  points="418 1372.74 509 1539 928 781 1162.32 1211 1346 1211 923.1 456 418 1372.74"
+                ></polygon>
+              </g>
+            </svg>
+          </div>
+          <span class="title">Visualize</span>
+        </span>
+
+        <div id="container"></div>
+        <div id="warning-message" class="warning-message"></div>
+        <div class="options">
+          <label for="userArr">Enter Inputs (Comma-Separated)</label>
+          <input type="text" id="userArr" placeholder="eg. 10,40,20,30,50" />
+         <label for="target" style="margin-left: 2rem">Enter Target</label>
+        <input type="text" id="target" placeholder="eg. 10">
+          <br /><br />
+          <button id="generate">Generate Random Array</button>
+          <button id="sort" style="margin-left: 2rem">Start Visualizer</button>
+          <label style="margin-left: 2rem" for="speedControl">Speed</label>
+          <input type="range" id="speedControl" min="1" max="3" value="2" />
+          <button id="clear" style="margin-left: 2rem">Clear</button>
+        </div>
+      </div>
+
+      <br /><br /><br /><br />
+
+
+
+      <!-- about -->
+      <div class="about" id="about">
+        <p>
+          The Two Pointer technique is a powerful algorithmic pattern that uses two pointers 
+          to traverse an array or sequence in a specific way. This technique is particularly 
+          useful for solving problems that involve searching pairs in a sorted array, finding 
+          subarrays that meet certain conditions, or comparing elements from different positions 
+          in the array.
+        </p>
+        <ol>
+          <li>
+            <strong>Basic Concept:</strong> Use two pointers that either:
+            <ul>
+              <li>Move towards each other (from ends to middle)</li>
+              <li>Move in the same direction (slow and fast pointers)</li>
+              <li>Move to track a window or range</li>
+            </ul>
+          </li>
+          <li>
+            <strong>Common Applications:</strong>
+            <ul>
+              <li>Finding pairs with a target sum in sorted array</li>
+              <li>Detecting cycles in linked lists</li>
+              <li>Finding palindromes</li>
+              <li>Removing duplicates</li>
+              <li>Three-sum problems</li>
+            </ul>
+          </li>
+          <li>
+            <strong>Key Advantages:</strong>
+            <ul>
+              <li>Reduces time complexity (often from O(n²) to O(n))</li>
+              <li>Uses minimal extra space (usually O(1))</li>
+              <li>Efficient for sorted array operations</li>
+            </ul>
+          </li>
+        </ol>
+      </div>
+
+      <div class="about" id="about">
+        <h2>Complexity Analysis of Two Pointer Algorithm</h2>
+        <p>The efficiency of the Two Pointer technique makes it a popular choice for many problems:</p>
+        <ul>
+          <li><strong>Time Complexity:</strong> O(n) for most implementations
+            <ul>
+              <li>Best Case: O(1) when target is found immediately</li>
+              <li>Average Case: O(n) single pass through array</li>
+              <li>Worst Case: O(n) complete traversal required</li>
+            </ul>
+          </li>
+          <li><strong>Space Complexity:</strong> O(1) constant extra space
+            <ul>
+              <li>Only requires two pointer variables</li>
+              <li>No additional data structures needed</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+
+      <div class="about">
+        <h3>When to Use Two Pointer Technique:</h3>
+        <ul>
+          <li>When dealing with sorted arrays</li>
+          <li>When searching for pairs or triplets</li>
+          <li>When you need to compare array elements from different positions</li>
+          <li>When tracking a sliding window or range</li>
+          <li>When you need to detect cycles in a linked list</li>
+        </ul>
+        <h3>Usage Tips:</h3>
+        <ul>
+          <li>Input array should be sorted for most two-pointer applications</li>
+          <li>Ensure your input values are valid numbers</li>
+          <li>For finding pairs, enter numbers in ascending order</li>
+          <li>Target sum should be achievable with given numbers</li>
+          <li>Maximum recommended array size: 20 numbers for clear visualization</li>
+        </ul>
+      </div>
+    </div>
+      <!-- about -->
+
+    <script src="https://cdn.jsdelivr.net/npm/motion@11.11.13/dist/motion.js"></script>
+    <script src="../../universal-js/slider.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
