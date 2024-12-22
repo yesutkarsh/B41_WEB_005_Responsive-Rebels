@@ -26,6 +26,7 @@ my-app/
 #### Algorithm containes all the algorithm we implemented
 #### Algorithm_Pages is Explore pages
 #### Algorithm_Pages is Explore Page
+#### universal js and universal css is styling some components (components used globally / reused) globally.
 
    
 
@@ -36,37 +37,38 @@ https://www.youtube.com/watch?v=ry_I9FfoQIU
 https://youtu.be/VVx-pcbOq38
 
 ## Features
-List out the key features of your application.
+Key features of your application.
 
-- Feature 1
-- Feature 2
-- Feature 3
+1. Algorithm Visualizer
+2. AI Code Editor
 
-## design decisions or assumptions
-List your design desissions & assumptions
+
+## Design Pattern
+We are following Dark Moder with light mode on algorithm page.
 
 ## Installation & Getting started
 ```bash
-git clone repo link
-npm i  ( node js must be installed)
+git clone https://github.com/yesutkarsh/B41_WEB_005_Responsive-Rebels.git
 ```
-open with live server or open index file in root directory
+
+```bash
+npm i
+```
+Open with live server or open index file in root directory/frontend directory.
+
+
 
 ## Usage
 After Cloning Repo
-1. Npm init
+1. npm init
 2. Open With Live Server or open index.html file form root
 3. Inside Frontend Folder we have algorithm folder which contains all the algorithm we have implemented so far.
 
 
 
-Include screenshots as necessary.
-
-## Credentials
-Provide user credentials for autheticated pages
 
 ## APIs Used
-For test purpose only i have provide my own api key but you must proceed with your own api key in .env file
+For test purpose only I have provide my own api key but you must proceed with your own api key in .env file
 
 
 
