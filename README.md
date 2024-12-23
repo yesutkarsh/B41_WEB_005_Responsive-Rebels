@@ -1,81 +1,74 @@
-# Algorithm Visualiser
+# Algorithm Visualizer
 
 ## Introduction
 The Algorithm Visualizer is an interactive web application built using HTML, CSS, and JavaScript. Its primary purpose is to help users understand the working of various sorting algorithms through dynamic visualizations. The application represents data as bars of different heights, which are manipulated and animated to simulate the sorting process in real-time. By offering a hands-on approach to learning algorithms, this project serves as an educational tool for students, developers, and anyone interested in computer science fundamentals.
 
 ## Project Type
-Frontend
+**Frontend**
 
-## Deplolyed App
-### Netlify Link
-https://algovisiondev.netlify.app/
-### Vercel Link
-https://algovisiondev.vercel.app/
-
+## Deployed App
+### Links
+- **Netlify**: [AlgoVision on Netlify](https://algovisiondev.netlify.app/)
+- **Vercel**: [AlgoVision on Vercel](https://algovisiondev.vercel.app/)
 
 ## Directory Structure
+```
 my-app/
 ├─ frontend/
-│  ├─Algorithms
-   ├─Algorithms_Page
-   ├─assets
-   ├─Description
-   ├─universal-css
-   ├─universal-js
+│  ├─ Algorithms
+│  ├─ Algorithms_Page
+│  ├─ assets
+│  ├─ Description
+│  ├─ universal-css
+│  ├─ universal-js
+```
+- **Algorithms**: Contains all the implemented algorithms.
+- **Algorithms_Page**: Explore pages.
+- **assets**: Stores images and other static files.
+- **Description**: Detailed descriptions of algorithms.
+- **universal-css** and **universal-js**: Styling and scripts for components used globally.
 
-#### Algorithm containes all the algorithm we implemented
-#### Algorithm_Pages is Explore pages
-#### Algorithm_Pages is Explore Page
-#### universal js and universal css is styling some components (components used globally / reused) globally.
-
-   
-
-## Video Walkthrough of the project
-https://www.youtube.com/watch?v=ry_I9FfoQIU
-
-## Video Walkthrough of the codebase
-https://youtu.be/VVx-pcbOq38
+## Video Walkthrough
+- **Project Walkthrough**: [Watch Video](https://www.youtube.com/watch?v=ry_I9FfoQIU)
+- **Codebase Walkthrough**: [Watch Video](https://youtu.be/VVx-pcbOq38)
 
 ## Features
-Key features of your application.
-
-1. Algorithm Visualizer
-2. AI Code Editor
-
+Key features of the application include:
+1. **Algorithm Visualizer**: Animates sorting algorithms in real-time.
+2. **AI Code Editor**: Detects and explains algorithms from user-provided code or pseudocode.
 
 ## Design Pattern
-We are following Dark Moder with light mode on algorithm page.
+We follow a **Dark Mode** design with an optional light mode on the algorithm page.
 
-## Installation & Getting started
-```bash
-git clone https://github.com/yesutkarsh/B41_WEB_005_Responsive-Rebels.git
-```
-
-```bash
-npm i
-```
-Open with live server or open index file in root directory/frontend directory.
-
-
+## Installation & Getting Started
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/yesutkarsh/B41_WEB_005_Responsive-Rebels.git
+    ```
+2. Install dependencies:
+    ```bash
+    npm i
+    ```
+3. Open the application:
+   - Use Live Server.
+   - Open the `index.html` file in the `frontend` directory.
 
 ## Usage
-After Cloning Repo
-1. npm init
-2. Open With Live Server or open index.html file form root
-3. Inside Frontend Folder we have algorithm folder which contains all the algorithm we have implemented so far.
-
-
-
+1. Clone the repository and run:
+    ```bash
+    npm init
+    ```
+2. Open the project:
+   - Use Live Server.
+   - Open `index.html` from the root directory.
+3. Explore the **frontend/algorithm** folder to view all implemented algorithms.
 
 ## APIs Used
-For test purpose only I have provide my own api key but you must proceed with your own api key in .env file
-
-
-
+For testing purposes, the project uses a provided API key. Replace it with your own key in the `.env` file for production use.
 
 ## Technology Stack
-- Html
-- Css
-- Javascript
-- Reminxicon as library for icon
-- gemini sdk and api
+- **HTML**
+- **CSS**
+- **JavaScript**
+- **Remixicon**: Library for icons.
+- **Gemini SDK and API**: For additional functionalities.
