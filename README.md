@@ -52,6 +52,9 @@ We follow a **Dark Mode** design with an optional light mode on the algorithm pa
 3. Open the application:
    - Use Live Server.
    - Open the `index.html` file in the `frontend` directory.
+  
+<img width="1919" height="980" alt="image" src="https://github.com/user-attachments/assets/7f0b31bc-d93a-42a0-9e46-09dc786ec354" />
+
 
 ## Usage
 1. Clone the repository and run:
